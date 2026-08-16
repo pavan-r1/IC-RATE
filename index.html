@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./image/LOGO.jpeg">
+    <title>RATE 2026 — International Conference on Recent Advancements in Technology & Engineering</title>
+    <meta name="description" content="RATE 2026: International Conference on Recent Advancements in Technology and Engineering. November 20, 2026 — T. John Institute of Technology, Bangalore.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#hero" class="logo-link">
+                <img src="./image/LOGO.jpeg" alt="RATE 2026" class="logo-img">
+                <span class="logo-text">RATE 2026</span>
+            </a>
+
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#dates-sec">Dates</a>
+                <a href="#tracks">Papers</a>
+                <a href="#keynotes">Speakers</a>
+                <a href="#fees">Fees</a>
+                <a href="#venue">Venue</a>
+                <div class="nav-dd">
+                    <a href="#committee" style="cursor:pointer">Committee ▾</a>
+                    <div class="nav-dd-menu">
+                        <a href="#committee">Organizing</a>
+                        <a href="#advisory">Advisory</a>
+                        <a href="#coreteam">Steering</a>
+                    </div>
+                </div>
+                <a href="#contact">Contact</a>
+                <a href="./submit-paper.html" class="nav-cta">
+                    Submit Paper
+                    </a>
+            </nav>
+
+            <button class="mobile-btn" id="mob-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+
+        <nav class="mobile-menu" id="mob-menu">
+            <button class="mobile-close" id="mob-close">&times;</button>
+            <a href="#about" onclick="closeMob()">About</a>
+            <a href="#dates-sec" onclick="closeMob()">Dates</a>
+            <a href="#tracks" onclick="closeMob()">Papers</a>
+            <a href="#keynotes" onclick="closeMob()">Speakers</a>
+            <a href="#fees" onclick="closeMob()">Fees</a>
+            <a href="#venue" onclick="closeMob()">Venue</a>
+            <a href="#committee" onclick="closeMob()">Committee</a>
+            <a href="#contact" onclick="closeMob()">Contact</a>
+            <a href="./submit-paper.html" target="_blank" class="nav-cta" onclick="closeMob()">Submit Paper</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="./image/19666T John Institute.jpg" alt="TJIT Building" class="carousel-image active" size="cover">
+            <img src="./image/blockgate.jpeg" alt="TJIT Campus" class="carousel-image">
+            <img src="./image/maxresdefault.jpg" alt="Conference Hall" class="carousel-image">
+        </div>
+        <div class="hero-dim"></div>
+
+        <div class="hero-body">
+            <p class="hero-label">Dept. of CSE / DS / CSE(IOT) — T. John Institute of Technology, Bangalore</p>
+
+            <h1 class="hero-title">
+                Recent Advancements in <em>Technology & Engineering</em>
+            </h1>
+
+            <p class="hero-sub">RATE 2026 — November 4, 2026</p>
+            <p class="hero-theme">"Innovations in Digital Transformation, and Sustainable Engineering"</p>
+
+            <div class="cd" id="countdown">
+                <div class="cd-box"><div class="cd-n" id="c-d">--</div><div class="cd-l">Days</div></div>
+                <div class="cd-box"><div class="cd-n" id="c-h">--</div><div class="cd-l">Hours</div></div>
+                <div class="cd-box"><div class="cd-n" id="c-m">--</div><div class="cd-l">Min</div></div>
+                <div class="cd-box"><div class="cd-n" id="c-s">--</div><div class="cd-l">Sec</div></div>
+            </div>
+
+            <div class="hero-btns">
+                <a href="./submit-paper.html" target="_blank" class="btn btn-w">Submit Your Paper →</a>
+                <a href="#fees" class="btn btn-ghost">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT + DATES -->
+    <section class="section" id="about">
+        <div class="wrap">
+            <div class="split">
+                <div data-anim>
+                    <p class="sec-eyebrow">About</p>
+                    <h2 class="sec-title">RATE 2026</h2>
+                    <p class="about-body" style="margin-top:1.25rem;">
+                        The <strong>International Conference on Recent Advancements in Technology and Engineering (RATE 2026)</strong> is a distinguished annual event dedicated to showcasing technological advancements and innovations in computer science, engineering, and related fields. Hosted by T. John Institute of Technology (TJIT) on <strong>November 4, 2026</strong>, in Bangalore, India.
+                    </p>
+                    <p class="about-body" style="margin-top:1rem;">
+                        Under the theme <strong>"Innovations in Digital Transformation, and Sustainable Engineering"</strong>, the conference serves as a platform for students, researchers, innovators, technologists, and industry professionals. The event spans Artificial Intelligence, IoT, Cyber Security, Data Science, Cloud Computing, and Software Engineering. We invite academics, researchers, and industry experts to present their latest findings and forge future collaborations.
+                    </p>
+                    <a href="#tracks" class="arr-link">Explore Tracks & Call for Papers →</a>
+                </div>
+
+                <div data-anim data-anim-delay="2" id="dates-sec">
+                    <div class="dates-box">
+                        <h3 class="dates-heading">Important Dates</h3>
+                        <div class="tl">
+                            <div class="tl">
+                            <div class="tl-item">
+                                 <div class="tl-dot"></div>
+                                <p class="tl-date">September 24, 2026</p>
+                                <p class="tl-label">Paper Submission Starts</p>
+                            </div>
+                            <div class="tl-item red">
+                            <div class="tl-dot"></div>
+                            <p class="tl-date">October 21, 2026</p>
+                            <p class="tl-label">Paper Submission Deadline</p>
+                            </div>
+
+                            <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <p class="tl-date">October 24, 2026</p>
+                            <p class="tl-label">Notification of Acceptance</p>
+                        </div>
+
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <p class="tl-date">October 28, 2026</p>
+                            <p class="tl-label">Camera Ready Submission</p>
+                        </div>
+
+                        <div class="tl-item gold">
+                            <div class="tl-dot"></div>
+                            <p class="tl-date">November 4, 2026</p>
+                            <p class="tl-label">Main Conference Date</p>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEES -->
+    <section class="section" id="fees">
+        <div class="wrap">
+
+            <div style="text-align:center;margin-bottom:3rem;" data-anim>
+                <p class="sec-eyebrow">Registration</p>
+                <h2 class="sec-title">Conference Fees</h2>
+                <p class="sec-desc" style="margin:0.75rem auto 0;">
+                    Registration fees for RATE 2026 participants.
+                </p>
+            </div>
+
+            <div class="fees-row" data-anim>
+
+                <div class="fee">
+                    <p class="fee-cat">TJIT Registration</p>
+                    <p class="fee-price">₹300 <small>/person</small></p>
+                    <p class="fee-note">For TJIT participants</p>
+                </div>
+
+                <div class="fee pop">
+                    <p class="fee-cat">Online Participants</p>
+                    <p class="fee-price">₹500 <small>/team</small></p>
+                    <p class="fee-note">Online participation</p>
+                </div>
+
+                <div class="fee">
+                    <p class="fee-cat">Outside Participants</p>
+                    <p class="fee-price">₹350 <small>/person</small></p>
+                    <p class="fee-note">Participants from outside TJIT</p>
+                </div>
+
+                <div class="fee">
+                    <p class="fee-cat">Industry Participants</p>
+                    <p class="fee-price">₹1,200 <small>/team</small></p>
+                    <p class="fee-note">Industry participants</p>
+                </div>
+
+            </div>
+
+            <div class="qr-strip" data-anim>
+                <img src="./imagE/QR CODE.jpg"
+                    alt="Payment QR Code">
+
+                <div>
+                    <h4>Scan & Pay</h4>
+                    <p>
+                        Use this QR code for registration payment. or <a href="https://forms.easebuzz.in/register/TJohnInstituteofTechn/ic-rate-2026-registration"><strong><u>click here to pay</u></strong></a><br>
+                        Keep your transaction receipt for verification.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- CALL FOR PAPERS -->
+    <section class="section" id="tracks">
+        <div class="wrap">
+            <div style="text-align:center;margin-bottom:2.5rem;" data-anim>
+                <p class="sec-eyebrow">Call for Papers</p>
+                <h2 class="sec-title">Technical Tracks</h2>
+                <p class="sec-desc" style="margin:0.75rem auto 0;">We invite research contributions across six major tracks.</p>
+                <a href="https://drive.google.com/file/d/1yXmtBPtf-bDWNqI9zbNRnjCnfjYYNFZP/view?usp=drivesdk" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.75rem;font-size:0.8125rem;font-weight:600;color:var(--red);">↓ Download Paper Template</a>
+            </div>
+
+            <div class="t-grid" data-anim>
+                <div class="t-card">
+                    <h3>Artificial Intelligence & ML</h3>
+                    <ul>
+                        <li>Deep Learning Models</li>
+                        <li>Natural Language Processing (NLP)</li>
+                        <li>Computer Vision and Image Processing</li>
+                        <li>Reinforcement Learning</li>
+                    </ul>
+                </div>
+                <div class="t-card">
+                    <h3>Data Science & Analytics</h3>
+                    <ul>
+                        <li>Big Data Architectures (Hadoop, Spark)</li>
+                        <li>Statistical Modeling and Data Mining</li>
+                        <li>Business Intelligence & Visualization</li>
+                        <li>Ethical Data Handling</li>
+                    </ul>
+                </div>
+                <div class="t-card">
+                    <h3>IoT & Smart Systems</h3>
+                    <ul>
+                        <li>IoT Security and Privacy</li>
+                        <li>Edge/Fog Computing for IoT</li>
+                        <li>Smart City and Healthcare Applications</li>
+                        <li>Sensor Networks and Wireless Comms</li>
+                    </ul>
+                </div>
+                <div class="t-card">
+                    <h3>Cloud & Edge Computing</h3>
+                    <ul>
+                        <li>Serverless and Microservices Architectures</li>
+                        <li>Cloud Security and Compliance</li>
+                        <li>Virtualization and Containerization</li>
+                        <li>Distributed Systems</li>
+                    </ul>
+                </div>
+                <div class="t-card">
+                    <h3>Security & Blockchain</h3>
+                    <ul>
+                        <li>Cryptography and Network Security</li>
+                        <li>Malware Analysis and Detection</li>
+                        <li>Decentralized Applications (dApps)</li>
+                        <li>Forensics and Incident Response</li>
+                    </ul>
+                </div>
+                <div class="t-card">
+                    <h3>Software Engineering</h3>
+                    <ul>
+                        <li>Agile and DevOps Methodologies</li>
+                        <li>Software Quality Assurance</li>
+                        <li>Human-Computer Interaction (HCI)</li>
+                        <li>Software Architecture Patterns</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:2.5rem;" data-anim>
+                <a href="./submit-paper.html" target="_blank" class="btn btn-accent">Submit Paper Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKERS -->
+    <section class="section" id="keynotes">
+        <div class="wrap">
+            <div style="text-align:center;margin-bottom:3rem;" data-anim>
+                <p class="sec-eyebrow">Keynotes</p>
+                <h2 class="sec-title">Featured Speakers</h2>
+                <p class="sec-desc" style="margin:0.75rem auto 0;">Insights from global leaders in technology and innovation.</p>
+            </div>
+
+            <div class="sp-grid" data-anim>
+                <div class="sp-card">
+                    <div class="sp-photo">
+                        <img src="./image/Chandrashekar-Rama1.jpg" alt="Chandrashekar Ramanathan">
+                    </div>
+                    <div class="sp-body">
+                        <p class="sp-role">Professor & Head, Digital Public Infrastructure (DPI) Division</p>
+
+                        <h3 class="sp-name">Professor Chandrashekar Ramanathan</h3>
+
+                        <p class="sp-at">
+                            International Institute of Information Technology Bangalore (IIIT-B)
+                        </p>
+
+                        <p class="sp-bio">
+                            Professor Chandrashekar Ramanathan has been associated with IIIT-B since 2007.
+                            His expertise includes Data Science, Software Engineering, Software Architecture,
+                            Data Analytics, Database Design, and Large-Scale Application Development.
+                            He holds a Ph.D. from Mississippi State University.
+                        </p>
+
+                        <a href="https://www.iiitb.ac.in/faculty/chandrashekar-ramanathan"
+                        target="_blank"
+                        class="arr-link"
+                        style="margin-top:0;">
+                            View Profile →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="sp-card">
+                    <div class="sp-photo">
+                        <img src="https://placehold.co/180x220/141414/888888?text=Nirbhay Choubey" alt="Nirbhay Choubey">
+                    </div>
+                    <div class="sp-body">
+                        <p class="sp-role">Team Lead at Bloomberg</p>
+                        <h3 class="sp-name">Mr. Nirbhay Choubey</h3>
+                        <p class="sp-at">Database Systems, Application Frameworks,New York City Metropolitan Area</p>
+                        <p class="sp-bio">At Bloomberg, I worked on enhancing database systems and
+                                        application frameworks to drive scalability and reliability for
+                                        enterprise solutions. Leveraging over a decade of experience in
+                                        software engineering, I contribute to the design and development of
+                                        robust systems with a focus on innovative problem-solving and team
+                                        collaboration.
+                                        With expertise in database systems, C/C++, Go, and Python, my
+                                        work is grounded in creating efficient, high-performing solutions
+                                        aligned with organizational goals. Passionate about empowering
+                                        teams and fostering collaboration, we aim to build systems that meet
+                                        dynamic market needs and exceed client expectations.</p>
+                        <a href="https://www.linkedin.com/in/nirbhayc/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BswGuXBqyQMiSSgutUBU7eg%3D%3D" target="_blank" class="arr-link" style="margin-top:0;">LinkedIn →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENUE -->
+    <section class="section" id="venue">
+        <div class="wrap">
+            <div style="text-align:center;margin-bottom:3rem;" data-anim>
+                <p class="sec-eyebrow">Location</p>
+                <h2 class="sec-title">Conference Venue</h2>
+            </div>
+
+            <div class="v-grid" data-anim>
+                <img src="./image/blockgate.jpeg" alt="TJIT Campus" class="v-img">
+                <div class="v-info">
+                    <h3>T. John Institute of Technology, Bangalore</h3>
+                    <p>
+                        <strong>Address:</strong><br>
+                        88/1, Gottigere, Bannerghatta Road,<br>
+                        Bangalore — 560083, Karnataka, India
+                    </p>
+                    <p>
+                        Established in 2006 and affiliated to VTU, approved by AICTE. Modern conference halls, ample parking, well connected by road — 20 km from Bangalore City Railway Station, 50 km from Kempegowda International Airport.
+                    </p>
+                    <p><strong>Mission</strong>
+                    To bring about their overall personality development, fostering a caring and creative. Environment that emphasizes physical, social and intellectual development in career and life.
+                    To instill a sense of understanding, remarkable resilience and enduring adaptation to a diverse, competitive and dynamic society through lifelong learning, employment and entrepreneurship.
+                    To create and nurture a learning and knowledge-based environment, conducive to the pursuit of quality education which would transform a socially responsible generation to act on their professional values and beliefs.</p>
+                    <p><strong>Vision</strong>To achieve excellence in delivering quality education of global standards, coupled with innovative practices using advanced technology and expertise, transforming the student community into potential global leaders with accountability to meet the societal, national and dynamic global challenges.</p><a href="https://maps.app.goo.gl/tuCbLRYFfKM2oxBZ8" target="_blank" class="btn btn-accent" style="font-size:0.8125rem;padding:0.625rem 1.25rem;margin-top:0.5rem;">View on Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMITTEE -->
+    <!-- COMMITTEE -->
+<section class="section" id="committee">
+    <div class="wrap">
+        <div style="text-align:center;margin-bottom:3rem;" data-anim>
+            <p class="sec-eyebrow">Committee</p>
+            <h2 class="sec-title">Organizing Committee</h2>
+            <p class="sec-desc" style="margin:0.75rem auto 0;">
+                The team behind RATE 2026.
+            </p>
+        </div>
+
+        <!-- Institutional Leadership -->
+        <h3 class="sub-heading" data-anim>Institutional Leadership</h3>
+
+        <div class="patrons" data-anim>
+
+            <div class="pat">
+                <img src="./image/Dr. Thomas P .John.png"
+                     alt="Dr. Thomas John">
+                <div>
+                    <p class="pr">Chief Patron</p>
+                    <p class="pn">Dr. Thomas John</p>
+                    <p class="pp">
+                        Provide Overall Guidance, Institutional Approval
+                    </p>
+                </div>
+            </div>
+
+            <div class="pat">
+                <img src="./image/principal_sir.png"
+                     alt="Dr. H P Srinivasa">
+                <div>
+                    <p class="pr" style="color:var(--green);">Patron</p>
+                    <p class="pn">Dr. H P Srinivasa</p>
+                    <p class="pp">
+                        Ensures smooth conduct, extend institutional facilities,
+                        oversee planning
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Advisory Committee -->
+        <h3 id="advisory" class="sub-heading" data-anim>
+            Advisory Committee
+        </h3>
+
+        <div class="adv-grid" data-anim>
+
+            <div class="adv">
+                <img src="./image/Dr. Jeevanandam J .png"
+                     alt="Dr. Jeevanandam J">
+                <div>
+                    <p class="an">Dr. Jeevanandam J</p>
+                    <p class="ar">Advisory Committee</p>
+                    <p class="ao">
+                        Guide on conference theme, technical quality
+                    </p>
+                </div>
+            </div>
+
+            <div class="adv">
+                <img src="./image/CHANDRASECAR.jpeg"
+                     alt="Dr. S N Chandrashekara">
+                <div>
+                    <p class="an">Dr. S N Chandrashekara</p>
+                    <p class="ar">Advisory Committee</p>
+                    <p class="ao">
+                        Connect with experts and advise on key decisions
+                    </p>
+                </div>
+            </div>
+
+            <div class="adv">
+                <img src="./image/sathya.jpeg"
+                     alt="Dr. Sathya M">
+                <div>
+                    <p class="an">Dr. Sathya M</p>
+                    <p class="ar">Advisory Committee</p>
+                    <p class="ao">
+                        Conference guidance and technical advice
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>   
+     <!-- Organizing Committee -->
+        <h3 class="sub-heading" data-anim>
+            Organizing Committee
+        </h3>
+
+        <div class="core-grid" data-anim>
+
+            <div class="cm">
+                <img src="./image/suma.png"
+                     alt="Dr. Suma R">
+                <p class="cr">Chair Person</p>
+                <p class="cn">Dr. Suma R</p>
+                <p class="ct">
+                    Lead & monitor all committees
+                </p>
+            </div>
+
+            <div class="cm">
+                <img src="./image/PRABHA.jpg"
+                     alt="Dr. Prabha R">
+                <p class="cr">Convener</p>
+                <p class="cn">Dr. Prabha R</p>
+                <p class="ct">
+                    Coordinate activities, main point of contact
+                </p>
+            </div>
+
+            <div class="cm">
+                <img src="./image/shanthala.jpeg"
+                     alt="Dr. Shanthala PT">
+                <p class="cr">Co-Convener</p>
+                <p class="cn">Dr. Shanthala PT</p>
+                <p class="ct">
+                    Assist conveners, oversee daily progress
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+<section>   
+        <!-- Functional Committees -->
+        <h3 class="sub-heading" data-anim>
+            Functional Committees
+        </h3>
+
+        <div class="fn-grid" data-anim>
+
+            <!-- Technical Committee -->
+            <div class="fn">
+                <h4>Technical Committee</h4>
+                <p class="fd">
+                    Define technical tracks, review papers, finalize technical
+                    sessions, assign reviewers & chairs.
+                </p>
+                <ul>
+                    <li>Dr. Chaya R</li>
+                    <li>Dr. S Sudhakar</li>
+                    <li>Dr. Rajashekar Reddy</li>
+                </ul>
+            </div>
+
+            <!-- Program Committee -->
+            <div class="fn">
+                <h4>Program Committee</h4>
+                <p class="fd">
+                    Prepare schedule, organize keynote/plenary talks,
+                    panel discussion, paper presentation.
+                </p>
+                <ul>
+                    <li>Dr. Sajithra Varun</li>
+                    <li>Dr. Jerald Prasath</li>
+                    <li>Ms. Nayana N</li>
+                </ul>
+            </div>
+
+            <!-- Publication Committee -->
+            <div class="fn">
+                <h4>Publication Committee</h4>
+                <p class="fd">
+                    Manage Proceedings, plagiarism check, indexing,
+                    coordinate with journals.
+                </p>
+                <ul>
+                    <li>Dr. E. Praynlin</li>
+                    <li>Ms. Sharada H. P</li>
+                </ul>
+            </div>
+
+            <!-- Finance Committee -->
+            <div class="fn">
+                <h4>Finance Committee</h4>
+                <p class="fd">
+                    Budget preparation, sponsorship funds, grants,
+                    monitor transactions.
+                </p>
+                <ul>
+                    <li>Dr. Prabha R</li>
+                    <li>Dr. Shanthala PT</li>
+                    <li>Ms. Nikitha V P</li>
+                </ul>
+            </div>
+
+            <!-- Registration & Hospitality -->
+            <div class="fn">
+                <h4>Registration & Hospitality Committee</h4>
+                <p class="fd">
+                    Manage registration, hospitality, welcome kits.
+                </p>
+                <ul>
+                    <li>Ms. Thejaswi Nandyala</li>
+                    <li>Ms. Y Sreevani</li>
+                    <li>Ms. Alisha Abraham</li>
+                    <li>Ms. Shinchana</li>
+                </ul>
+            </div>
+
+            <!-- Publicity & Promotion -->
+            <div class="fn">
+                <h4>Publicity & Promotion Committee</h4>
+                <p class="fd">
+                    Design brochures, posters, social media promotion.
+                </p>
+                <ul>
+                    <li>Dr. Santhosh PK</li>
+                    <li>Ms. Syeda Tameema</li>
+                </ul>
+            </div>
+
+            <!-- Logistics & Infrastructure -->
+            <div class="fn">
+                <h4>Logistics & Infrastructure Committee</h4>
+                <p class="fd">
+                    Venue setup, seating, audio visuals, IT support,
+                    manage online platforms.
+                </p>
+                <ul>
+                    <li>Ms. Tabassum</li>
+                    <li>Ms. Smitha H</li>
+                    <li>Ms. Suganya</li>
+                    <li>Mr. Mayuresh</li>
+                    <li>Mr. Pradeep</li>
+                    <li>Mr. Lohit</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section> 
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div>
+                 <h3><img src="./image/LOGO.jpeg" alt="RATE 2026 Logo" class="footer-logo">RATE 2026</h3>
+                    
+                    <p>
+                    International Conference on Recent Advancements in Technology & Engineering.
+                    <br>
+                    T. John Institute of Technology, Bangalore.
+                    </p>
+                </div>
+                <div id="contact">
+                    <h4>Contact</h4>
+                    <p style="font-size:0.8125rem;color:var(--text-dim);">+91 99809 29663 / +91 94488 89091</p>
+                    <p style="font-size:0.8125rem;color:var(--text-dim);">Email: <a href="mailto:iconfrate@gmail.com">iconfrate@gmail.com</a></p>
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RATE Conference. All rights reserved.</p>
+                <p>T. John Institute of Technology, Bangalore</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        // Header scroll
+        const hdr = document.getElementById('header');
+        window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 40));
+
+        // Scroll reveal
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        document.querySelectorAll('[data-anim]').forEach(el => io.observe(el));
+
+        // Countdown — Paper Submission Deadline: October 21, 2026
+const dl = new Date('October 21, 2026 23:59:59').getTime();
+        const p = n => String(n).padStart(2, '0');
+        (function tick() {
+            const d = dl - Date.now();
+            if (d <= 0) { document.getElementById('countdown').innerHTML = '<p style="color:var(--text-dim);font-size:0.875rem;">Submissions closed.</p>'; return; }
+            document.getElementById('c-d').textContent = p(Math.floor(d / 864e5));
+            document.getElementById('c-h').textContent = p(Math.floor((d % 864e5) / 36e5));
+            document.getElementById('c-m').textContent = p(Math.floor((d % 36e5) / 6e4));
+            document.getElementById('c-s').textContent = p(Math.floor((d % 6e4) / 1e3));
+            setTimeout(tick, 1000);
+        })();
+
+        // Hero carousel
+        const imgs = document.querySelectorAll('.carousel-image');
+        let ci = 0;
+        if (imgs.length > 1) setInterval(() => { imgs[ci].classList.remove('active'); ci = (ci + 1) % imgs.length; imgs[ci].classList.add('active'); }, 5000);
+
+        // Mobile menu
+        const mn = document.getElementById('mob-menu');
+        document.getElementById('mob-btn').addEventListener('click', () => mn.classList.add('open'));
+        document.getElementById('mob-close').addEventListener('click', () => mn.classList.remove('open'));
+        window.closeMob = () => mn.classList.remove('open');
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,4263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="./image/LOGO.jpeg">
+    <title>RATE 2026 — International Conference on Recent Advancements in Technology & Engineering</title>
+    <meta name="description" content="RATE 2026: International Conference on Recent Advancements in Technology and Engineering. November 20, 2026 — T. John Institute of Technology, Bangalore.">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Paper Submission | RATE 2026</title>
+
+    <meta
+        name="description"
+        content="RATE 2026 Research Paper Submission"
+    >
+
+    <style>
+
+        /* =========================================
+           RATE 2026 VARIABLES
+        ========================================= */
+
+        :root {
+            --bg: #f7f7f5;
+            --surface: #ffffff;
+            --surface-2: #f1f1ef;
+
+            --text: #171717;
+            --text-dim: #555555;
+            --text-muted: #888888;
+
+            --red: #b42025;
+            --red-dark: #8f171c;
+            --red-light: #f8e9ea;
+
+            --border: #ddddda;
+
+            --shadow:
+                0 10px 35px rgba(0, 0, 0, 0.07);
+
+            --radius: 12px;
+        }
+
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f8f8f6 0%,
+                    #ffffff 100%
+                );
+
+            color: var(--text);
+
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            line-height: 1.6;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+
+        /* =========================================
+           TOP HEADER
+        ========================================= */
+
+        .top-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background:
+                rgba(255, 255, 255, 0.96);
+
+            border-bottom:
+                1px solid var(--border);
+
+            backdrop-filter:
+                blur(12px);
+        }
+
+        .header-inner {
+            max-width: 1180px;
+
+            margin: auto;
+
+            padding:
+                0.9rem 1.5rem;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 1rem;
+        }
+
+
+        .brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 0.8rem;
+
+            text-decoration: none;
+
+            color: var(--text);
+        }
+
+
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+
+            border-radius: 8px;
+
+            object-fit: cover;
+
+            border:
+                1px solid var(--border);
+        }
+
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .brand-name {
+            font-size: 0.95rem;
+
+            font-weight: 800;
+
+            letter-spacing:
+                0.03em;
+        }
+
+
+        .brand-subtitle {
+            color: var(--text-muted);
+
+            font-size: 0.65rem;
+
+            letter-spacing:
+                0.08em;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .back-button {
+            text-decoration: none;
+
+            color: var(--text);
+
+            border:
+                1px solid var(--border);
+
+            padding:
+                0.65rem 1rem;
+
+            border-radius: 7px;
+
+            font-size: 0.78rem;
+
+            font-weight: 700;
+
+            transition:
+                0.2s ease;
+        }
+
+
+        .back-button:hover {
+            color: var(--red);
+
+            border-color:
+                var(--red);
+        }
+
+
+        /* =========================================
+           PAGE HEADER
+        ========================================= */
+
+        .page-header {
+            max-width: 1000px;
+
+            margin:
+                0 auto;
+
+            padding:
+                4rem 1.5rem 2rem;
+
+            text-align: center;
+        }
+
+
+        .eyebrow {
+            display: inline-block;
+
+            margin-bottom:
+                0.6rem;
+
+            color: var(--red);
+
+            font-size: 0.7rem;
+
+            font-weight: 800;
+
+            letter-spacing:
+                0.14em;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .page-header h1 {
+            margin-bottom:
+                0.7rem;
+
+            font-size:
+                clamp(2rem, 5vw, 3.5rem);
+
+            line-height: 1.05;
+
+            letter-spacing:
+                -0.04em;
+        }
+
+
+        .page-header p {
+            max-width: 650px;
+
+            margin:
+                0 auto;
+
+            color: var(--text-dim);
+
+            font-size:
+                0.95rem;
+        }
+
+
+        /* =========================================
+           MAIN CONTAINER
+        ========================================= */
+
+        .container {
+            width: min(
+                100% - 2rem,
+                980px
+            );
+
+            margin:
+                0 auto 5rem;
+        }
+
+
+        /* =========================================
+           PROGRESS
+        ========================================= */
+
+        .progress-wrapper {
+            margin-bottom:
+                2rem;
+
+            overflow-x: auto;
+        }
+
+
+        .progress {
+            min-width: 620px;
+
+            display: flex;
+
+            align-items:
+                flex-start;
+
+            justify-content:
+                center;
+        }
+
+
+        .progress-step {
+            min-width: 120px;
+
+            text-align: center;
+
+            position: relative;
+        }
+
+
+        .progress-number {
+            width: 42px;
+            height: 42px;
+
+            margin:
+                0 auto 0.45rem;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                50%;
+
+            background:
+                var(--surface);
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                0.8rem;
+
+            font-weight:
+                800;
+
+            transition:
+                0.25s ease;
+        }
+
+
+        .progress-label {
+            color:
+                var(--text-muted);
+
+            font-size:
+                0.7rem;
+
+            font-weight:
+                700;
+        }
+
+
+        .progress-step.active
+        .progress-number,
+
+        .progress-step.completed
+        .progress-number {
+            background:
+                var(--red);
+
+            border-color:
+                var(--red);
+
+            color:
+                #ffffff;
+        }
+
+
+        .progress-step.active
+        .progress-label,
+
+        .progress-step.completed
+        .progress-label {
+            color:
+                var(--red);
+        }
+
+
+        .progress-line {
+            width: 75px;
+
+            height: 1px;
+
+            margin-top:
+                21px;
+
+            background:
+                var(--border);
+        }
+
+
+        /* =========================================
+           FORM CARD
+        ========================================= */
+
+        .form-card {
+            background:
+                var(--surface);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius);
+
+            box-shadow:
+                var(--shadow);
+
+            overflow:
+                hidden;
+        }
+
+
+        .form-step {
+            display: none;
+
+            padding:
+                2.5rem;
+        }
+
+
+        .form-step.active {
+            display: block;
+
+            animation:
+                fadeIn 0.3s ease;
+        }
+
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        .step-heading {
+            margin-bottom:
+                2rem;
+
+            padding-bottom:
+                1.2rem;
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .step-heading h2 {
+            margin-bottom:
+                0.35rem;
+
+            font-size:
+                1.5rem;
+        }
+
+
+        .step-heading p {
+            color:
+                var(--text-dim);
+
+            font-size:
+                0.82rem;
+        }
+
+
+        /* =========================================
+           FORM GRID
+        ========================================= */
+
+        .form-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap:
+                1.25rem;
+        }
+
+
+        .field {
+            display:
+                flex;
+
+            flex-direction:
+                column;
+        }
+
+
+        .field.full {
+            grid-column:
+                1 / -1;
+        }
+
+
+        .field label {
+            margin-bottom:
+                0.45rem;
+
+            color:
+                var(--text);
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                750;
+        }
+
+
+        .required {
+            color:
+                var(--red);
+        }
+
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                7px;
+
+            background:
+                #ffffff;
+
+            color:
+                var(--text);
+
+            padding:
+                0.85rem 0.9rem;
+
+            outline:
+                none;
+
+            font-size:
+                0.82rem;
+
+            transition:
+                0.2s ease;
+        }
+
+
+        .field textarea {
+            min-height:
+                150px;
+
+            resize:
+                vertical;
+        }
+
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color:
+                var(--red);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(180, 32, 37, 0.08);
+        }
+
+
+        .field input::placeholder,
+        .field textarea::placeholder {
+            color:
+                #aaaaaa;
+        }
+
+
+        .help-text {
+            margin-top:
+                0.35rem;
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                0.68rem;
+        }
+
+
+        /* =========================================
+           FILE UPLOAD
+        ========================================= */
+
+        .file-box {
+            position:
+                relative;
+
+            min-height:
+                120px;
+
+            border:
+                1.5px dashed
+                var(--border);
+
+            border-radius:
+                8px;
+
+            background:
+                #fafafa;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            transition:
+                0.2s ease;
+
+            overflow:
+                hidden;
+        }
+
+
+        .file-box:hover {
+            border-color:
+                var(--red);
+
+            background:
+                var(--red-light);
+        }
+
+
+        .file-box input {
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            opacity:
+                0;
+
+            cursor:
+                pointer;
+        }
+
+
+        .file-content {
+            pointer-events:
+                none;
+
+            padding:
+                1rem;
+        }
+
+
+        .file-icon {
+            width:
+                38px;
+
+            height:
+                38px;
+
+            margin:
+                0 auto 0.5rem;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--red-light);
+
+            color:
+                var(--red);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-weight:
+                900;
+        }
+
+
+        .file-title {
+            display:
+                block;
+
+            color:
+                var(--text);
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                750;
+        }
+
+
+        .file-description {
+            display:
+                block;
+
+            margin-top:
+                0.2rem;
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                0.65rem;
+        }
+
+
+        .selected-file {
+            margin-top:
+                0.5rem;
+
+            color:
+                var(--red);
+
+            font-size:
+                0.7rem;
+
+            font-weight:
+                700;
+
+            word-break:
+                break-word;
+        }
+
+
+        /* =========================================
+           AUTHOR BOX
+        ========================================= */
+
+        .author-box {
+            margin-bottom:
+                1.2rem;
+
+            padding:
+                1.3rem;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                9px;
+        }
+
+
+        .author-header {
+            margin-bottom:
+                1rem;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                1rem;
+        }
+
+
+        .author-header h3 {
+            font-size:
+                0.95rem;
+        }
+
+
+        .corresponding-badge {
+            padding:
+                0.3rem 0.55rem;
+
+            border-radius:
+                5px;
+
+            background:
+                var(--red-light);
+
+            color:
+                var(--red);
+
+            font-size:
+                0.6rem;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .remove-author {
+            border:
+                0;
+
+            background:
+                transparent;
+
+            color:
+                var(--red);
+
+            cursor:
+                pointer;
+
+            font-size:
+                0.7rem;
+
+            font-weight:
+                700;
+        }
+
+
+        .add-author {
+            width:
+                100%;
+
+            padding:
+                0.8rem;
+
+            border:
+                1px dashed
+                var(--red);
+
+            border-radius:
+                7px;
+
+            background:
+                transparent;
+
+            color:
+                var(--red);
+
+            cursor:
+                pointer;
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                750;
+        }
+
+
+        .add-author:hover {
+            background:
+                var(--red-light);
+        }
+
+
+        /* =========================================
+           REVIEW
+        ========================================= */
+
+        .review-section {
+            padding:
+                1.4rem 0;
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .review-section:first-child {
+            padding-top:
+                0;
+        }
+
+
+        .review-section h3 {
+            margin-bottom:
+                1rem;
+
+            font-size:
+                0.95rem;
+        }
+
+
+        .review-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap:
+                0.8rem;
+        }
+
+
+        .review-item {
+            padding:
+                0.8rem;
+
+            background:
+                #fafafa;
+
+            border-radius:
+                6px;
+        }
+
+
+        .review-item.full {
+            grid-column:
+                1 / -1;
+        }
+
+
+        .review-item span {
+            display:
+                block;
+
+            margin-bottom:
+                0.2rem;
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                0.65rem;
+        }
+
+
+        .review-item strong {
+            display:
+                block;
+
+            color:
+                var(--text);
+
+            font-size:
+                0.78rem;
+
+            word-break:
+                break-word;
+        }
+
+
+        .review-authors {
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                0.6rem;
+        }
+
+
+        .review-author {
+            padding:
+                0.8rem;
+
+            background:
+                #fafafa;
+
+            border-radius:
+                6px;
+
+            font-size:
+                0.75rem;
+        }
+
+
+        .review-author strong {
+            display:
+                block;
+        }
+
+
+        .review-author small {
+            color:
+                var(--text-muted);
+        }
+
+
+        /* =========================================
+           DECLARATION
+        ========================================= */
+
+        .declaration {
+            margin-top:
+                1.5rem;
+
+            padding:
+                1rem;
+
+            background:
+                var(--red-light);
+
+            border:
+                1px solid
+                rgba(180, 32, 37, 0.15);
+
+            border-radius:
+                8px;
+        }
+
+
+        .declaration label {
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                0.65rem;
+
+            margin-bottom:
+                0.8rem;
+
+            color:
+                var(--text-dim);
+
+            font-size:
+                0.75rem;
+
+            cursor:
+                pointer;
+        }
+
+
+        .declaration label:last-child {
+            margin-bottom:
+                0;
+        }
+
+
+        .declaration input {
+            margin-top:
+                3px;
+
+            accent-color:
+                var(--red);
+        }
+
+
+        /* =========================================
+           BUTTONS
+        ========================================= */
+
+        .actions {
+            margin-top:
+                2rem;
+
+            padding-top:
+                1.5rem;
+
+            border-top:
+                1px solid var(--border);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                1rem;
+        }
+
+
+        .btn {
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                0.5rem;
+
+            border:
+                1px solid transparent;
+
+            border-radius:
+                7px;
+
+            padding:
+                0.85rem 1.3rem;
+
+            cursor:
+                pointer;
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                750;
+
+            text-decoration:
+                none;
+
+            transition:
+                0.2s ease;
+        }
+
+
+        .btn-primary {
+            background:
+                var(--red);
+
+            color:
+                #ffffff;
+        }
+
+
+        .btn-primary:hover {
+            background:
+                var(--red-dark);
+        }
+
+
+        .btn-secondary {
+            background:
+                #ffffff;
+
+            color:
+                var(--text);
+
+            border-color:
+                var(--border);
+        }
+
+
+        .btn-secondary:hover {
+            border-color:
+                var(--red);
+
+            color:
+                var(--red);
+        }
+
+
+        .btn:disabled {
+            opacity:
+                0.6;
+
+            cursor:
+                not-allowed;
+        }
+
+
+        /* =========================================
+           SUCCESS
+        ========================================= */
+
+        .success {
+            display:
+                none;
+
+            text-align:
+                center;
+
+            padding:
+                4rem 2rem;
+        }
+
+
+        .success.active {
+            display:
+                block;
+
+            animation:
+                fadeIn 0.35s ease;
+        }
+
+
+        .success-icon {
+            width:
+                70px;
+
+            height:
+                70px;
+
+            margin:
+                0 auto 1.3rem;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--red-light);
+
+            color:
+                var(--red);
+
+            font-size:
+                2rem;
+
+            font-weight:
+                900;
+        }
+
+
+        .success h2 {
+            margin-bottom:
+                0.5rem;
+
+            font-size:
+                2rem;
+        }
+
+
+        .success p {
+            max-width:
+                550px;
+
+            margin:
+                0 auto 1.2rem;
+
+            color:
+                var(--text-dim);
+
+            font-size:
+                0.9rem;
+        }
+
+
+        .paper-id {
+            max-width:
+                400px;
+
+            margin:
+                1.5rem auto;
+
+            padding:
+                1.3rem;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                9px;
+        }
+
+
+        .paper-id span {
+            display:
+                block;
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                0.65rem;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.1em;
+        }
+
+
+        .paper-id strong {
+            display:
+                block;
+
+            margin:
+                0.35rem 0;
+
+            color:
+                var(--red);
+
+            font-size:
+                1.5rem;
+
+            letter-spacing:
+                0.05em;
+        }
+
+
+        .status {
+            display:
+                inline-block;
+
+            padding:
+                0.4rem 0.8rem;
+
+            background:
+                var(--red-light);
+
+            color:
+                var(--red);
+
+            border-radius:
+                5px;
+
+            font-size:
+                0.7rem;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            padding:
+                2rem 1.5rem;
+
+            border-top:
+                1px solid var(--border);
+
+            text-align:
+                center;
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                0.7rem;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 700px) {
+
+            .header-inner {
+                padding:
+                    0.75rem 1rem;
+            }
+
+
+            .brand-logo {
+                width:
+                    40px;
+
+                height:
+                    40px;
+            }
+
+
+            .back-button {
+                padding:
+                    0.55rem 0.7rem;
+
+                font-size:
+                    0.68rem;
+            }
+
+
+            .page-header {
+                padding:
+                    3rem 1rem 1.5rem;
+            }
+
+
+            .container {
+                width:
+                    min(
+                        100% - 1rem,
+                        980px
+                    );
+            }
+
+
+            .form-step {
+                padding:
+                    1.3rem;
+            }
+
+
+            .form-grid,
+            .review-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .field.full,
+            .review-item.full {
+                grid-column:
+                    auto;
+            }
+
+
+            .actions {
+                flex-direction:
+                    column-reverse;
+            }
+
+
+            .actions .btn {
+                width:
+                    100%;
+            }
+
+
+            .progress {
+                justify-content:
+                    flex-start;
+            }
+
+
+            .progress-line {
+                width:
+                    35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header class="top-header">
+
+        <div class="header-inner">
+
+
+            <a
+                href="index.html"
+                class="brand"
+            >
+
+                <!-- If your logo has a different filename,
+                     change this path -->
+
+                <img
+                    src="image/LOGO.jpeg"
+                    alt="RATE 2026 Logo"
+                    class="brand-logo"
+                >
+
+                <div class="brand-text">
+
+                    <span class="brand-name">
+                        RATE 2026
+                    </span>
+
+                    <span class="brand-subtitle">
+                        International Conference
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ← Back to Conference
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         PAGE HEADER
+    ========================================= -->
+
+    <section class="page-header">
+
+        <span class="eyebrow">
+            RATE 2026
+        </span>
+
+        <h1>
+            Paper Submission
+        </h1>
+
+        <p>
+            Submit your research paper for the
+            International Conference on Research
+            Advances in Technology and Education.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================= -->
+
+    <main class="container">
+
+
+        <!-- =====================================
+             PROGRESS
+        ====================================== -->
+
+        <div
+            class="progress-wrapper"
+            id="progress-wrapper"
+        >
+
+            <div class="progress">
+
+
+                <div
+                    class="progress-step active"
+                    id="progress-1"
+                >
+
+                    <div class="progress-number">
+                        1
+                    </div>
+
+                    <div class="progress-label">
+                        Registration
+                    </div>
+
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div
+                    class="progress-step"
+                    id="progress-2"
+                >
+
+                    <div class="progress-number">
+                        2
+                    </div>
+
+                    <div class="progress-label">
+                        Paper Details
+                    </div>
+
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div
+                    class="progress-step"
+                    id="progress-3"
+                >
+
+                    <div class="progress-number">
+                        3
+                    </div>
+
+                    <div class="progress-label">
+                        Authors
+                    </div>
+
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div
+                    class="progress-step"
+                    id="progress-4"
+                >
+
+                    <div class="progress-number">
+                        4
+                    </div>
+
+                    <div class="progress-label">
+                        Confirm
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             FORM CARD
+        ====================================== -->
+
+        <div class="form-card">
+
+
+            <!-- ==================================
+                 STEP 1
+            =================================== -->
+
+            <section
+                class="form-step active"
+                id="step-1"
+            >
+
+                <div class="step-heading">
+
+                    <span class="eyebrow">
+                        Step 01
+                    </span>
+
+                    <h2>
+                        Registration Details
+                    </h2>
+
+                    <p>
+                        Enter the details of the
+                        corresponding author.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="field full">
+
+                        <label for="participantCategory">
+
+                            Participation Category
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <select
+                            id="participantCategory"
+                            required
+                        >
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="TJIT Participant">
+                                TJIT Participant — ₹300/person
+                            </option>
+
+                            <option value="Online Participant">
+                                Online Participant — ₹500/team
+                            </option>
+
+                            <option value="Outside Participant">
+                                Outside Participant — ₹350/person
+                            </option>
+
+                            <option value="Industry Participant">
+                                Industry Participant — ₹1,200/team
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- NAME -->
+
+                    <div class="field">
+
+                        <label for="correspondingName">
+
+                            Full Name
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="correspondingName"
+                            placeholder="Enter full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="field">
+
+                        <label for="correspondingEmail">
+
+                            Email Address
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correspondingEmail"
+                            placeholder="example@email.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- MOBILE -->
+
+                    <div class="field">
+
+                        <label for="correspondingMobile">
+
+                            Mobile Number
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="correspondingMobile"
+                            placeholder="Enter mobile number"
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- INSTITUTION -->
+
+                    <div class="field">
+
+                        <label for="institution">
+
+                            Institution / Organization
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="institution"
+                            placeholder="College / University / Company"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- DEPARTMENT -->
+
+                    <div class="field">
+
+                        <label for="department">
+
+                            Department
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="department"
+                            placeholder="Department"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- DESIGNATION -->
+
+                    <div class="field">
+
+                        <label for="designation">
+
+                            Designation
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <select
+                            id="designation"
+                            required
+                        >
+
+                            <option value="">
+                                Select Designation
+                            </option>
+
+                            <option value="Student">
+                                Student
+                            </option>
+
+                            <option value="Research Scholar">
+                                Research Scholar
+                            </option>
+
+                            <option value="Faculty">
+                                Faculty
+                            </option>
+
+                            <option value="Professor">
+                                Professor
+                            </option>
+
+                            <option value="Industry Professional">
+                                Industry Professional
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CITY -->
+
+                    <div class="field">
+
+                        <label for="city">
+
+                            City
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="City"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- STATE -->
+
+                    <div class="field">
+
+                        <label for="state">
+
+                            State
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="state"
+                            placeholder="State"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PAYMENT SCREENSHOT -->
+
+                    <div class="field full">
+
+                        <label for="paymentScreenshot">
+
+                            Registration / Payment Screenshot
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <div class="file-box">
+
+                            <input
+                                type="file"
+                                id="paymentScreenshot"
+                                accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+                                required
+                            >
+
+
+                            <div class="file-content">
+
+                                <div class="file-icon">
+                                    ↑
+                                </div>
+
+                                <span class="file-title">
+                                    Upload Payment Screenshot
+                                </span>
+
+                                <span class="file-description">
+                                    JPG or PNG
+                                </span>
+
+                                <div
+                                    class="selected-file"
+                                    id="payment-file-name"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                        <p class="help-text">
+                            Upload the screenshot of your
+                            registration/payment confirmation.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="actions">
+
+                    <div></div>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        onclick="nextStep(1)"
+                    >
+                        Continue →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 STEP 2
+            =================================== -->
+
+            <section
+                class="form-step"
+                id="step-2"
+            >
+
+                <div class="step-heading">
+
+                    <span class="eyebrow">
+                        Step 02
+                    </span>
+
+                    <h2>
+                        Paper Details
+                    </h2>
+
+                    <p>
+                        Enter the details of your
+                        research paper.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <!-- TITLE -->
+
+                    <div class="field full">
+
+                        <label for="paperTitle">
+
+                            Paper Title
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="paperTitle"
+                            placeholder="Enter the complete title of your paper"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- TRACK -->
+
+                    <div class="field full">
+
+                        <label for="paperTrack">
+
+                            Technical Track
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <select
+                            id="paperTrack"
+                            required
+                        >
+
+                            <option value="">
+                                Select Technical Track
+                            </option>
+
+                            <option value="Artificial Intelligence & ML">
+                                Artificial Intelligence & ML
+                            </option>
+
+                            <option value="Data Science & Analytics">
+                                Data Science & Analytics
+                            </option>
+
+                            <option value="IoT & Smart Systems">
+                                IoT & Smart Systems
+                            </option>
+
+                            <option value="Cloud & Edge Computing">
+                                Cloud & Edge Computing
+                            </option>
+
+                            <option value="Security & Blockchain">
+                                Security & Blockchain
+                            </option>
+
+                            <option value="Software Engineering">
+                                Software Engineering
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ABSTRACT -->
+
+                    <div class="field full">
+
+                        <label for="paperAbstract">
+
+                            Abstract
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <textarea
+                            id="paperAbstract"
+                            maxlength="3000"
+                            placeholder="Enter your paper abstract"
+                            required
+                        ></textarea>
+
+                        <p class="help-text">
+                            Maximum 3000 characters.
+                        </p>
+
+                    </div>
+
+
+                    <!-- KEYWORDS -->
+
+                    <div class="field full">
+
+                        <label for="keywords">
+
+                            Keywords
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="keywords"
+                            placeholder="Artificial Intelligence, Machine Learning, IoT"
+                            required
+                        >
+
+                        <p class="help-text">
+                            Separate keywords using commas.
+                        </p>
+
+                    </div>
+
+
+                    <!-- PAPER PDF -->
+
+                    <div class="field full">
+
+                        <label for="paperFile">
+
+                            Research Paper PDF
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <div class="file-box">
+
+                            <input
+                                type="file"
+                                id="paperFile"
+                                accept=".pdf,application/pdf"
+                                required
+                            >
+
+
+                            <div class="file-content">
+
+                                <div class="file-icon">
+                                    ↑
+                                </div>
+
+                                <span class="file-title">
+                                    Upload Research Paper
+                                </span>
+
+                                <span class="file-description">
+                                    PDF only
+                                </span>
+
+                                <div
+                                    class="selected-file"
+                                    id="paper-file-name"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="help-text">
+                            Please upload your paper in the
+                            prescribed RATE 2026 template.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        onclick="previousStep(2)"
+                    >
+                        ← Back
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        onclick="nextStep(2)"
+                    >
+                        Continue →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 STEP 3
+            =================================== -->
+
+            <section
+                class="form-step"
+                id="step-3"
+            >
+
+                <div class="step-heading">
+
+                    <span class="eyebrow">
+                        Step 03
+                    </span>
+
+                    <h2>
+                        Author Details
+                    </h2>
+
+                    <p>
+                        Add all authors who contributed
+                        to the paper.
+                    </p>
+
+                </div>
+
+
+                <div id="authors-container">
+
+
+                    <!-- AUTHOR 1 -->
+
+                    <div
+                        class="author-box"
+                        data-author="1"
+                    >
+
+                        <div class="author-header">
+
+                            <h3>
+                                Author 1
+                            </h3>
+
+                            <span
+                                class="corresponding-badge"
+                            >
+                                Corresponding Author
+                            </span>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="field">
+
+                                <label>
+
+                                    Full Name
+
+                                    <span class="required">
+                                        *
+                                    </span>
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="author-name"
+                                    placeholder="Full name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+
+                                    Email
+
+                                    <span class="required">
+                                        *
+                                    </span>
+
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="author-email"
+                                    placeholder="Email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+
+                                    Institution
+
+                                    <span class="required">
+                                        *
+                                    </span>
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="author-institution"
+                                    placeholder="Institution"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Department
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="author-department"
+                                    placeholder="Department"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="add-author"
+                    onclick="addAuthor()"
+                >
+                    + Add Another Author
+                </button>
+
+
+                <div class="actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        onclick="previousStep(3)"
+                    >
+                        ← Back
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        onclick="nextStep(3)"
+                    >
+                        Continue →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 STEP 4
+            =================================== -->
+
+            <section
+                class="form-step"
+                id="step-4"
+            >
+
+                <div class="step-heading">
+
+                    <span class="eyebrow">
+                        Step 04
+                    </span>
+
+                    <h2>
+                        Review & Confirm
+                    </h2>
+
+                    <p>
+                        Check all information before
+                        submitting your paper.
+                    </p>
+
+                </div>
+
+
+                <!-- REGISTRATION REVIEW -->
+
+                <div class="review-section">
+
+                    <h3>
+                        Registration Details
+                    </h3>
+
+
+                    <div class="review-grid">
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Participation Category
+                            </span>
+
+                            <strong
+                                id="review-category"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Corresponding Author
+                            </span>
+
+                            <strong
+                                id="review-name"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong
+                                id="review-email"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Mobile
+                            </span>
+
+                            <strong
+                                id="review-mobile"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Institution
+                            </span>
+
+                            <strong
+                                id="review-institution"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Department
+                            </span>
+
+                            <strong
+                                id="review-department"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PAPER REVIEW -->
+
+                <div class="review-section">
+
+                    <h3>
+                        Paper Details
+                    </h3>
+
+
+                    <div class="review-grid">
+
+
+                        <div
+                            class="review-item full"
+                        >
+
+                            <span>
+                                Paper Title
+                            </span>
+
+                            <strong
+                                id="review-title"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Technical Track
+                            </span>
+
+                            <strong
+                                id="review-track"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Keywords
+                            </span>
+
+                            <strong
+                                id="review-keywords"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div
+                            class="review-item full"
+                        >
+
+                            <span>
+                                Abstract
+                            </span>
+
+                            <strong
+                                id="review-abstract"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FILE REVIEW -->
+
+                <div class="review-section">
+
+                    <h3>
+                        Uploaded Files
+                    </h3>
+
+
+                    <div class="review-grid">
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Payment Screenshot
+                            </span>
+
+                            <strong
+                                id="review-payment"
+                            >
+                                Not selected
+                            </strong>
+
+                        </div>
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Research Paper
+                            </span>
+
+                            <strong
+                                id="review-paper"
+                            >
+                                Not selected
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AUTHORS REVIEW -->
+
+                <div class="review-section">
+
+                    <h3>
+                        Authors
+                    </h3>
+
+                    <div
+                        class="review-authors"
+                        id="review-authors"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- DECLARATION -->
+
+                <div class="declaration">
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="originalDeclaration"
+                        >
+
+                        <span>
+                            I confirm that the submitted
+                            paper is original and that
+                            all information provided is
+                            correct.
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="guidelinesDeclaration"
+                        >
+
+                        <span>
+                            I agree to the RATE 2026
+                            paper submission guidelines
+                            and conference policies.
+                        </span>
+
+                    </label>
+
+
+                </div>
+
+
+
+                <div class="actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        onclick="previousStep(4)"
+                    >
+                        ← Back
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="submitButton"
+                        onclick="submitPaper()"
+                    >
+                        Submit Paper →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 SUCCESS
+            =================================== -->
+
+            <section
+                class="success"
+                id="success"
+            >
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+
+                <span class="eyebrow">
+                    Submission Successful
+                </span>
+
+
+                <h2>
+                    Thank You!
+                </h2>
+
+
+                <p>
+                    Your research paper has been
+                    successfully submitted to
+                    RATE 2026.
+                </p>
+
+
+                <div class="paper-id">
+
+                    <span>
+                        Your Paper ID
+                    </span>
+
+                    <strong
+                        id="generated-paper-id"
+                    >
+                        RATE2026-001
+                    </strong>
+
+                    <span>
+                        Status
+                    </span>
+
+                    <div
+                        class="status"
+                        style="margin-top:0.5rem;"
+                    >
+                        Submitted
+                    </div>
+
+                </div>
+
+
+                <p>
+                    Please save your Paper ID for
+                    future reference and communication
+                    with the conference organizers.
+                </p>
+
+
+                <a
+                    href="index.html"
+                    class="btn btn-primary"
+                >
+                    ← Back to RATE 2026
+                </a>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        © 2026 RATE Conference.
+        All Rights Reserved.
+
+    </footer>
+
+
+
+    <script>
+
+
+        /* =========================================
+           GOOGLE APPS SCRIPT URL
+        ========================================= */
+
+        const GOOGLE_SCRIPT_URL =
+            "https://script.google.com/macros/s/AKfycbxkMsxMpgU41PulF7yu4Svy60ElCuOmzGO__sdjDeCu34oMfafRao-gwPO6uiaDTmDm/exec";
+
+
+        /* =========================================
+           VARIABLES
+        ========================================= */
+
+        let currentStep = 1;
+
+        let authorCount = 1;
+
+
+
+        /* =========================================
+           STEP NAVIGATION
+        ========================================= */
+
+        function showStep(step) {
+
+            document
+                .querySelectorAll(".form-step")
+                .forEach(section => {
+
+                    section.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+            const selected =
+                document.getElementById(
+                    "step-" + step
+                );
+
+
+            if (selected) {
+
+                selected.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            /*
+             * Progress
+             */
+
+            for (
+                let i = 1;
+                i <= 4;
+                i++
+            ) {
+
+                const progress =
+                    document.getElementById(
+                        "progress-" + i
+                    );
+
+
+                if (!progress) continue;
+
+
+                progress.classList.remove(
+                    "active",
+                    "completed"
+                );
+
+
+                if (i < step) {
+
+                    progress.classList.add(
+                        "completed"
+                    );
+
+                }
+
+
+                if (i === step) {
+
+                    progress.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+
+        /* =========================================
+           VALIDATE STEP
+        ========================================= */
+
+        function validateStep(step) {
+
+            const section =
+                document.getElementById(
+                    "step-" + step
+                );
+
+
+            if (!section) {
+
+                return false;
+
+            }
+
+
+            const required =
+                section.querySelectorAll(
+                    "[required]"
+                );
+
+
+            for (
+                const field of required
+            ) {
+
+                if (
+                    field.type === "checkbox"
+                ) {
+
+                    if (!field.checked) {
+
+                        field.focus();
+
+                        alert(
+                            "Please complete all required fields."
+                        );
+
+                        return false;
+
+                    }
+
+                    continue;
+
+                }
+
+
+                if (!field.value.trim()) {
+
+                    field.focus();
+
+                    alert(
+                        "Please complete all required fields."
+                    );
+
+                    return false;
+
+                }
+
+            }
+
+
+            return true;
+
+        }
+
+
+
+        /* =========================================
+           NEXT STEP
+        ========================================= */
+
+        function nextStep(step) {
+
+            if (!validateStep(step)) {
+
+                return;
+
+            }
+
+
+            if (step === 3) {
+
+                prepareReview();
+
+            }
+
+
+            currentStep =
+                Math.min(
+                    step + 1,
+                    4
+                );
+
+
+            showStep(
+                currentStep
+            );
+
+        }
+
+
+
+        /* =========================================
+           PREVIOUS STEP
+        ========================================= */
+
+        function previousStep(step) {
+
+            currentStep =
+                Math.max(
+                    step - 1,
+                    1
+                );
+
+
+            showStep(
+                currentStep
+            );
+
+        }
+
+
+
+        /* =========================================
+           ADD AUTHOR
+        ========================================= */
+
+        function addAuthor() {
+
+            authorCount++;
+
+
+            const container =
+                document.getElementById(
+                    "authors-container"
+                );
+
+
+            const box =
+                document.createElement(
+                    "div"
+                );
+
+
+            box.className =
+                "author-box";
+
+
+            box.dataset.author =
+                authorCount;
+
+
+            box.innerHTML = `
+
+                <div class="author-header">
+
+                    <h3>
+                        Author ${authorCount}
+                    </h3>
+
+                    <button
+                        type="button"
+                        class="remove-author"
+                        onclick="removeAuthor(this)"
+                    >
+                        Remove
+                    </button>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="field">
+
+                        <label>
+
+                            Full Name
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="author-name"
+                            placeholder="Full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+
+                            Email
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="email"
+                            class="author-email"
+                            placeholder="Email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+
+                            Institution
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="author-institution"
+                            placeholder="Institution"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Department
+                        </label>
+
+                        <input
+                            type="text"
+                            class="author-department"
+                            placeholder="Department"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            `;
+
+
+            container.appendChild(
+                box
+            );
+
+        }
+
+
+
+        /* =========================================
+           REMOVE AUTHOR
+        ========================================= */
+
+        function removeAuthor(button) {
+
+            const box =
+                button.closest(
+                    ".author-box"
+                );
+
+
+            if (!box) return;
+
+
+            box.remove();
+
+
+            const authors =
+                document.querySelectorAll(
+                    ".author-box"
+                );
+
+
+            authors.forEach(
+                (author, index) => {
+
+                    const number =
+                        index + 1;
+
+
+                    author.dataset.author =
+                        number;
+
+
+                    const heading =
+                        author.querySelector(
+                            "h3"
+                        );
+
+
+                    if (heading) {
+
+                        heading.textContent =
+                            `Author ${number}`;
+
+                    }
+
+                }
+            );
+
+
+            authorCount =
+                authors.length;
+
+        }
+
+
+
+        /* =========================================
+           PREPARE REVIEW
+        ========================================= */
+
+        function prepareReview() {
+
+
+            /*
+             * Registration
+             */
+
+            document.getElementById(
+                "review-category"
+            ).textContent =
+                getValue(
+                    "participantCategory"
+                );
+
+
+            document.getElementById(
+                "review-name"
+            ).textContent =
+                getValue(
+                    "correspondingName"
+                );
+
+
+            document.getElementById(
+                "review-email"
+            ).textContent =
+                getValue(
+                    "correspondingEmail"
+                );
+
+
+            document.getElementById(
+                "review-mobile"
+            ).textContent =
+                getValue(
+                    "correspondingMobile"
+                );
+
+
+            document.getElementById(
+                "review-institution"
+            ).textContent =
+                getValue(
+                    "institution"
+                );
+
+
+            document.getElementById(
+                "review-department"
+            ).textContent =
+                getValue(
+                    "department"
+                );
+
+
+            /*
+             * Paper
+             */
+
+            document.getElementById(
+                "review-title"
+            ).textContent =
+                getValue(
+                    "paperTitle"
+                );
+
+
+            document.getElementById(
+                "review-track"
+            ).textContent =
+                getValue(
+                    "paperTrack"
+                );
+
+
+            document.getElementById(
+                "review-keywords"
+            ).textContent =
+                getValue(
+                    "keywords"
+                );
+
+
+            document.getElementById(
+                "review-abstract"
+            ).textContent =
+                getValue(
+                    "paperAbstract"
+                );
+
+
+            /*
+             * Files
+             */
+
+            const payment =
+                document.getElementById(
+                    "paymentScreenshot"
+                ).files[0];
+
+
+            const paper =
+                document.getElementById(
+                    "paperFile"
+                ).files[0];
+
+
+            document.getElementById(
+                "review-payment"
+            ).textContent =
+                payment
+                    ? payment.name
+                    : "Not selected";
+
+
+            document.getElementById(
+                "review-paper"
+            ).textContent =
+                paper
+                    ? paper.name
+                    : "Not selected";
+
+
+            /*
+             * Authors
+             */
+
+            const reviewAuthors =
+                document.getElementById(
+                    "review-authors"
+                );
+
+
+            reviewAuthors.innerHTML = "";
+
+
+            document
+                .querySelectorAll(
+                    ".author-box"
+                )
+                .forEach(
+                    (author, index) => {
+
+
+                        const name =
+                            author.querySelector(
+                                ".author-name"
+                            )?.value.trim()
+                            || "—";
+
+
+                        const email =
+                            author.querySelector(
+                                ".author-email"
+                            )?.value.trim()
+                            || "—";
+
+
+                        const institution =
+                            author.querySelector(
+                                ".author-institution"
+                            )?.value.trim()
+                            || "—";
+
+
+                        const department =
+                            author.querySelector(
+                                ".author-department"
+                            )?.value.trim()
+                            || "";
+
+
+                        const div =
+                            document.createElement(
+                                "div"
+                            );
+
+
+                        div.className =
+                            "review-author";
+
+
+                        div.innerHTML = `
+
+                            <strong>
+                                Author ${index + 1}:
+                                ${escapeHTML(name)}
+                            </strong>
+
+                            <small>
+                                ${escapeHTML(email)}
+                                ·
+                                ${escapeHTML(institution)}
+                                ${
+                                    department
+                                        ? " · " +
+                                          escapeHTML(
+                                              department
+                                          )
+                                        : ""
+                                }
+                            </small>
+
+                        `;
+
+
+                        reviewAuthors.appendChild(
+                            div
+                        );
+
+                    }
+                );
+
+        }
+
+
+
+        /* =========================================
+           GET VALUE
+        ========================================= */
+
+        function getValue(id) {
+
+            const element =
+                document.getElementById(id);
+
+
+            if (!element) {
+
+                return "—";
+
+            }
+
+
+            return (
+                element.value.trim()
+                || "—"
+            );
+
+        }
+
+
+
+        /* =========================================
+           HTML ESCAPE
+        ========================================= */
+
+        function escapeHTML(value) {
+
+            return String(value)
+                .replace(
+                    /&/g,
+                    "&amp;"
+                )
+                .replace(
+                    /</g,
+                    "&lt;"
+                )
+                .replace(
+                    />/g,
+                    "&gt;"
+                )
+                .replace(
+                    /"/g,
+                    "&quot;"
+                )
+                .replace(
+                    /'/g,
+                    "&#039;"
+                );
+
+        }
+
+
+
+        /* =========================================
+           FILE → BASE64
+        ========================================= */
+
+        function fileToBase64(file) {
+
+            return new Promise(
+                (resolve, reject) => {
+
+                    const reader =
+                        new FileReader();
+
+
+                    reader.onload =
+                        function () {
+
+                            const result =
+                                reader.result;
+
+
+                            const base64 =
+                                result.split(
+                                    ","
+                                )[1];
+
+
+                            resolve(
+                                base64
+                            );
+
+                        };
+
+
+                    reader.onerror =
+                        function () {
+
+                            reject(
+                                new Error(
+                                    "Unable to read file."
+                                )
+                            );
+
+                        };
+
+
+                    reader.readAsDataURL(
+                        file
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =========================================
+           SUBMIT PAPER
+        ========================================= */
+
+        async function submitPaper() {
+
+
+            /*
+             * Declaration
+             */
+
+            const original =
+                document.getElementById(
+                    "originalDeclaration"
+                );
+
+
+            const guidelines =
+                document.getElementById(
+                    "guidelinesDeclaration"
+                );
+
+
+            if (
+                !original.checked ||
+                !guidelines.checked
+            ) {
+
+                alert(
+                    "Please accept both declarations before submitting."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * Files
+             */
+
+            const paymentFile =
+                document.getElementById(
+                    "paymentScreenshot"
+                ).files[0];
+
+
+            const paperFile =
+                document.getElementById(
+                    "paperFile"
+                ).files[0];
+
+
+            if (!paymentFile) {
+
+                alert(
+                    "Please upload the payment screenshot."
+                );
+
+                return;
+
+            }
+
+
+            if (!paperFile) {
+
+                alert(
+                    "Please upload the research paper PDF."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * File type validation
+             */
+
+            const paymentTypes = [
+                "image/jpeg",
+                "image/png"
+            ];
+
+
+            if (
+                !paymentTypes.includes(
+                    paymentFile.type
+                )
+            ) {
+
+                alert(
+                    "Payment screenshot must be JPG or PNG."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                paperFile.type !==
+                "application/pdf"
+            ) {
+
+                alert(
+                    "Research paper must be a PDF."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * File size validation
+             *
+             * For the first version:
+             * Payment: 5 MB
+             * Paper: 10 MB
+             */
+
+            const MAX_PAYMENT_SIZE =
+                5 * 1024 * 1024;
+
+
+            const MAX_PAPER_SIZE =
+                10 * 1024 * 1024;
+
+
+            if (
+                paymentFile.size >
+                MAX_PAYMENT_SIZE
+            ) {
+
+                alert(
+                    "Payment screenshot must be smaller than 5 MB."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                paperFile.size >
+                MAX_PAPER_SIZE
+            ) {
+
+                alert(
+                    "Research paper must be smaller than 10 MB."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * Button
+             */
+
+            const button =
+                document.getElementById(
+                    "submitButton"
+                );
+
+
+            const originalText =
+                button.innerHTML;
+
+
+            button.disabled =
+                true;
+
+
+            button.innerHTML =
+                "Submitting...";
+
+
+            try {
+
+
+                /*
+                 * Convert files
+                 */
+
+                const paymentBase64 =
+                    await fileToBase64(
+                        paymentFile
+                    );
+
+
+                const paperBase64 =
+                    await fileToBase64(
+                        paperFile
+                    );
+
+
+                /*
+                 * Authors
+                 */
+
+                const authors = [];
+
+
+                document
+                    .querySelectorAll(
+                        ".author-box"
+                    )
+                    .forEach(
+                        authorBox => {
+
+
+                            const name =
+                                authorBox
+                                    .querySelector(
+                                        ".author-name"
+                                    )
+                                    ?.value
+                                    .trim()
+                                    || "";
+
+
+                            const email =
+                                authorBox
+                                    .querySelector(
+                                        ".author-email"
+                                    )
+                                    ?.value
+                                    .trim()
+                                    || "";
+
+
+                            const institution =
+                                authorBox
+                                    .querySelector(
+                                        ".author-institution"
+                                    )
+                                    ?.value
+                                    .trim()
+                                    || "";
+
+
+                            const department =
+                                authorBox
+                                    .querySelector(
+                                        ".author-department"
+                                    )
+                                    ?.value
+                                    .trim()
+                                    || "";
+
+
+                            authors.push({
+
+                                name:
+                                    name,
+
+                                email:
+                                    email,
+
+                                institution:
+                                    institution,
+
+                                department:
+                                    department
+
+                            });
+
+                        }
+                    );
+
+
+                /*
+                 * Data
+                 */
+
+                const data = {
+
+                    participantCategory:
+                        getValue(
+                            "participantCategory"
+                        ),
+
+                    correspondingName:
+                        getValue(
+                            "correspondingName"
+                        ),
+
+                    correspondingEmail:
+                        getValue(
+                            "correspondingEmail"
+                        ),
+
+                    correspondingMobile:
+                        getValue(
+                            "correspondingMobile"
+                        ),
+
+                    institution:
+                        getValue(
+                            "institution"
+                        ),
+
+                    department:
+                        getValue(
+                            "department"
+                        ),
+
+                    designation:
+                        getValue(
+                            "designation"
+                        ),
+
+                    city:
+                        getValue(
+                            "city"
+                        ),
+
+                    state:
+                        getValue(
+                            "state"
+                        ),
+
+                    paperTitle:
+                        getValue(
+                            "paperTitle"
+                        ),
+
+                    paperTrack:
+                        getValue(
+                            "paperTrack"
+                        ),
+
+                    paperAbstract:
+                        getValue(
+                            "paperAbstract"
+                        ),
+
+                    keywords:
+                        getValue(
+                            "keywords"
+                        ),
+
+                    authors:
+                        authors,
+
+                    paymentFile: {
+
+                        name:
+                            paymentFile.name,
+
+                        mimeType:
+                            paymentFile.type,
+
+                        data:
+                            paymentBase64
+
+                    },
+
+                    paperFile: {
+
+                        name:
+                            paperFile.name,
+
+                        mimeType:
+                            paperFile.type,
+
+                        data:
+                            paperBase64
+
+                    }
+
+                };
+
+
+                /*
+                 * Send to Apps Script
+                 *
+                 * text/plain is intentional.
+                 */
+
+                const response =
+                    await fetch(
+                        GOOGLE_SCRIPT_URL,
+                        {
+
+                            method:
+                                "POST",
+
+                            headers: {
+
+                                "Content-Type":
+                                    "text/plain;charset=utf-8"
+
+                            },
+
+                            body:
+                                JSON.stringify(
+                                    data
+                                )
+
+                        }
+                    );
+
+
+                /*
+                 * Read response
+                 */
+
+                const result =
+                    await response.json();
+
+
+                /*
+                 * Success
+                 */
+
+                if (
+                    result.success
+                ) {
+
+
+                    document.getElementById(
+                        "generated-paper-id"
+                    ).textContent =
+                        result.paperId;
+
+
+                    document
+                        .querySelectorAll(
+                            ".form-step"
+                        )
+                        .forEach(
+                            section => {
+
+                                section.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                    document.getElementById(
+                        "progress-wrapper"
+                    ).style.display =
+                        "none";
+
+
+                    document.getElementById(
+                        "success"
+                    ).classList.add(
+                        "active"
+                    );
+
+
+                    window.scrollTo({
+
+                        top: 0,
+
+                        behavior:
+                            "smooth"
+
+                    });
+
+
+                } else {
+
+
+                    throw new Error(
+                        result.error ||
+                        "The server rejected the submission."
+                    );
+
+                }
+
+
+            } catch (error) {
+
+
+                console.error(
+                    "Submission error:",
+                    error
+                );
+
+
+                alert(
+                    "Submission failed.\n\n" +
+                    error.message +
+                    "\n\nPlease check your internet connection and try again."
+                );
+
+
+                button.disabled =
+                    false;
+
+
+                button.innerHTML =
+                    originalText;
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           FILE NAME DISPLAY
+        ========================================= */
+
+        document
+            .getElementById(
+                "paymentScreenshot"
+            )
+            .addEventListener(
+                "change",
+                function () {
+
+                    const file =
+                        this.files[0];
+
+
+                    document.getElementById(
+                        "payment-file-name"
+                    ).textContent =
+                        file
+                            ? file.name
+                            : "";
+
+                }
+            );
+
+
+        document
+            .getElementById(
+                "paperFile"
+            )
+            .addEventListener(
+                "change",
+                function () {
+
+                    const file =
+                        this.files[0];
+
+
+                    document.getElementById(
+                        "paper-file-name"
+                    ).textContent =
+                        file
+                            ? file.name
+                            : "";
+
+                }
+            );
+
+
+
+        /* =========================================
+           INITIALIZE
+        ========================================= */
+
+        showStep(1);
+
+
+    </script>
+
+</body>
+
+</html>
