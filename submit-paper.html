@@ -9,7 +9,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Paper Submission | RATE 2026</title>
+    <title>Authors Submission | RATE 2026</title>
 
     <meta
         name="description"
@@ -1560,14 +1560,14 @@
             RATE 2026
         </span>
 
-        <h1>
-            Paper Submission
+        <h1>    
+            Author Submission
         </h1>
 
         <p>
             Submit your research paper for the
             International Conference on Research
-            Advances in Technology and Education.
+            Advances in Technology and Education.<br><a href="https://forms.easebuzz.in/register/TJohnInstituteofTechn/ic-rate-2026-registration"><strong><u>click here to pay</u></strong></a><br>
         </p>
 
     </section>
@@ -1801,7 +1801,20 @@
                         >
 
                     </div>
+                    <div class="field">
+    <label for="transactionId">
+        Transaction ID <span class="required">*</span>
+    </label>
 
+    <input
+        type="text"
+        id="transactionId"
+        name="transactionId"
+        placeholder="Enter your payment transaction ID"
+        required
+        autocomplete="off"
+    >
+</div>
 
                     <!-- MOBILE -->
 
@@ -2130,7 +2143,7 @@
                                 Select Technical Track
                             </option>
 
-                            <option value="Artificial Intelligence & ML">
+                                <option value="Artificial Intelligence & ML">
                                 Artificial Intelligence & ML
                             </option>
 
@@ -2152,6 +2165,14 @@
 
                             <option value="Software Engineering">
                                 Software Engineering
+                            </option>
+                            
+                            <option value="Sustainable Engineering & Green Technologies">
+                                Sustainable Engineering &amp; Green Technologies
+                            </option>
+
+                            <option value="Strategic Management & Business Innovation">
+                             Strategic Management &amp; Business Innovation
                             </option>
 
                         </select>
@@ -2522,6 +2543,21 @@
 
                             <strong
                                 id="review-category"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="review-item">
+
+                            <span>
+                                Transaction ID
+                            </span>
+
+                            <strong
+                                id="review-transaction"
                             >
                                 —
                             </strong>
@@ -3375,6 +3411,14 @@
 
 
             document.getElementById(
+                "review-transaction"
+            ).textContent =
+                getValue(
+                    "transactionId"
+                );
+
+
+            document.getElementById(
                 "review-name"
             ).textContent =
                 getValue(
@@ -3975,6 +4019,11 @@
                             "participantCategory"
                         ),
 
+                    transactionId:
+                        getValue(
+                            "transactionId"
+                        ),
+
                     correspondingName:
                         getValue(
                             "correspondingName"
@@ -4098,11 +4147,40 @@
 
 
                 /*
-                 * Read response
+                 * Read response safely
+                 *
+                 * If Apps Script returns an HTML error page
+                 * instead of JSON, show a useful message rather
+                 * than "Unexpected token '<'".
                  */
 
-                const result =
-                    await response.json();
+                const responseText =
+                    await response.text();
+
+                if (!response.ok) {
+                    throw new Error(
+                        `Server returned HTTP ${response.status}. ${
+                            responseText.slice(0, 250)
+                        }`
+                    );
+                }
+
+                let result;
+
+                try {
+                    result = JSON.parse(responseText);
+                } catch (parseError) {
+                    console.error(
+                        "Non-JSON server response:",
+                        responseText
+                    );
+
+                    throw new Error(
+                        "The submission server did not return JSON. " +
+                        "Please check that the Google Apps Script Web App URL is correct, deployed as a Web App, and accessible to anyone. " +
+                        `Server response: ${responseText.slice(0, 180)}`
+                    );
+                }
 
 
                 /*
