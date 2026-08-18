@@ -1810,32 +1810,160 @@ img {
 }
 
 .patrons {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto 4.5rem;
+
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 1rem;
-
-    max-width: 660px;
-
-    margin:
-        0 auto
-        3.5rem;
+    gap: 1.25rem;
 }
 
 .pat {
+    width: 100%;
+    min-height: 125px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1.2rem;
+
+    padding: 1.25rem 1.5rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16,44,70,0.96),
+            rgba(8,29,48,0.96)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+    box-sizing: border-box;
+}
+
+.pat:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(79,140,255,0.45);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.25);
+}
+
+.pat img {
+    width: 68px;
+    height: 68px;
+
+    min-width: 68px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255,255,255,0.15);
+}
+
+.pat > div {
+    min-width: 0;
+    flex: 1;
+}
+
+.pat .pr {
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    color: var(--accent);
+
+    margin-bottom: 3px;
+}
+
+.pat .pn {
+    font-family: var(--heading-font);
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    color: #fff;
+
+    margin-bottom: 3px;
+}
+
+.pat .pp {
+    font-size: 0.72rem;
+
+    color: var(--text-muted);
+
+    font-style: italic;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   ADVISORY COMMITTEE
+========================================================= */
+
+.adv-grid {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 0 1rem;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 1rem;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ADVISORY CARD
+========================================================= */
+
+.adv-grid > .adv {
+    width: 100%;
+    min-width: 0;
+
+    min-height: 110px;
+
     display: flex;
 
     align-items: center;
 
     gap: 1rem;
 
+    padding: 1rem 1.15rem;
+
     background:
         linear-gradient(
             145deg,
-            rgba(16,44,70,0.95),
-            rgba(8,29,48,0.95)
+            rgba(16,44,70,0.96),
+            rgba(8,29,48,0.96)
         );
 
     border:
@@ -1843,133 +1971,92 @@ img {
 
     border-radius: 12px;
 
-    padding: 1.25rem;
+    box-sizing: border-box;
 
     transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-.pat:hover {
-    transform:
-        translateY(-3px);
+.adv-grid > .adv:hover {
+    transform: translateY(-3px);
 
     border-color:
-        rgba(79,140,255,0.3);
-}
+        rgba(79,140,255,0.45);
 
-.pat img {
-    width: 56px;
-    height: 56px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border:
-        1px solid var(--border);
-}
-
-.pat .pr {
-    font-size: 0.68rem;
-
-    font-weight: 800;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.06em;
-
-    color: var(--accent);
-}
-
-.pat .pn {
-    font-size: 1rem;
-
-    font-weight: 700;
-}
-
-.pat .pp {
-    font-size: 0.68rem;
-
-    color: var(--text-muted);
-
-    font-style: italic;
+    box-shadow:
+        0 10px 28px rgba(0,0,0,0.25);
 }
 
 
 /* =========================================================
-   ADVISORY
+   ADVISORY PHOTO
 ========================================================= */
 
-.adv-grid {
-    display: grid;
+.adv-grid > .adv img {
+    width: 64px;
+    height: 64px;
 
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap: 0.75rem;
-}
-
-.adv {
-    display: flex;
-
-    align-items: center;
-
-    gap: 0.75rem;
-
-    background:
-        rgba(16,44,70,0.75);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 10px;
-
-    padding: 0.9rem;
-
-    transition:
-        border-color 0.2s ease,
-        transform 0.2s ease;
-}
-
-.adv:hover {
-    border-color:
-        rgba(79,140,255,0.3);
-
-    transform:
-        translateY(-2px);
-}
-
-.adv img {
-    width: 42px;
-    height: 42px;
-
-    border-radius: 50%;
+    min-width: 64px;
 
     object-fit: cover;
 
+    border-radius: 50%;
+
     border:
-        1px solid var(--border);
+        2px solid rgba(255,255,255,0.15);
+
+    background: #183b5b;
 
     flex-shrink: 0;
 }
 
+
+/* =========================================================
+   ADVISORY TEXT
+========================================================= */
+
+.adv-grid > .adv > div {
+    min-width: 0;
+
+    flex: 1;
+}
+
 .adv .an {
-    font-size: 0.82rem;
+    margin: 0;
+
+    font-family: var(--heading-font);
+
+    font-size: 0.98rem;
 
     font-weight: 700;
+
+    line-height: 1.25;
+
+    color: #ffffff;
 }
 
 .adv .ar {
-    font-size: 0.68rem;
+    margin: 3px 0 0;
 
-    color: var(--accent);
+    font-size: 0.76rem;
 
     font-weight: 600;
+
+    line-height: 1.35;
+
+    color: var(--accent);
 }
 
 .adv .ao {
-    font-size: 0.62rem;
+    margin: 3px 0 0;
+
+    font-size: 0.69rem;
+
+    font-weight: 400;
+
+    line-height: 1.4;
 
     color: var(--text-muted);
 }
@@ -2047,9 +2134,19 @@ img {
     display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, minmax(0, 1fr));
 
     gap: 2rem;
+}
+
+.core-grid .cm {
+    text-align: center;
+}
+
+.core-grid .cm .cr,
+.core-grid .cm .cn,
+.core-grid .cm .ct {
+    text-align: center;
 }
 
 .cm img {
@@ -2910,3 +3007,1064 @@ img {
             rgba(255,255,255,0.10) !important;
     }
 }
+/* =========================================================
+   DEPARTMENT — VISION & MISSION
+   COMPLETE CSS
+========================================================= */
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.department-vm {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    padding: 0 2rem;
+
+    position: relative;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DEPARTMENT HEADING
+========================================================= */
+
+.department-vm-heading {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 0 auto 3.5rem;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   DEPARTMENT EYEBROW
+========================================================= */
+
+.department-vm-heading .vm-eyebrow {
+    display: inline-block;
+
+    margin: 0 0 1rem;
+
+    padding: 9px 22px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(79, 140, 255, 0.10);
+
+    border:
+        1px solid rgba(79, 140, 255, 0.30);
+
+    color: #76a7ff;
+
+    font-family: var(--heading-font);
+
+    font-size: 0.74rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.department-vm-heading h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: var(--heading-font);
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        2.8rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.04em;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.department-vm-heading .vm-intro {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 1rem auto 0;
+
+    color: var(--text-dim);
+
+    font-family: var(--body-font);
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   VISION + MISSION CONTAINER
+========================================================= */
+
+.department-vm .vision-mission {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    gap: 2rem;
+
+    align-items: stretch;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.department-vm .vm-card {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 2.6rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            #123653 0%,
+            #0c2942 100%
+        );
+
+    border:
+        1px solid rgba(120, 180, 255, 0.20);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   CARD TOP HIGHLIGHT
+========================================================= */
+
+.department-vm .vm-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 8%;
+
+    width: 84%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #4f8cff,
+            transparent
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   CARD DECORATIVE GLOW
+========================================================= */
+
+.department-vm .vm-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    top: -105px;
+    right: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(79, 140, 255, 0.07);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.department-vm .vm-card:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(79, 140, 255, 0.42);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.department-vm .vm-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1.4rem;
+
+    border-radius: 12px;
+
+    background:
+        rgba(79, 140, 255, 0.10);
+
+    border:
+        1px solid rgba(79, 140, 255, 0.30);
+
+    color: #5b98ff;
+
+    font-size: 1.35rem;
+
+    line-height: 1;
+
+    position: relative;
+
+    z-index: 3;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.department-vm .vm-card h3 {
+    margin: 0 0 1.35rem;
+
+    color: #ffffff;
+
+    font-family: var(--heading-font);
+
+    font-size: 1.8rem;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.03em;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   VISION TEXT
+========================================================= */
+
+.department-vm .vm-card > p {
+    margin: 0;
+
+    color: #b7c9da;
+
+    font-family: var(--body-font);
+
+    font-size: 0.95rem;
+
+    font-weight: 400;
+
+    line-height: 1.9;
+
+    text-align: left;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   VISION STRONG TEXT
+========================================================= */
+
+.department-vm .vm-card > p strong {
+    color: #ffffff;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   MISSION LIST
+========================================================= */
+
+.department-vm .mission-list {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.2rem;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   MISSION ITEM
+========================================================= */
+
+.department-vm .mission-item {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        46px
+        minmax(0, 1fr);
+
+    gap: 1rem;
+
+    align-items: start;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MISSION NUMBER
+========================================================= */
+
+.department-vm .mission-item span {
+    width: 46px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background:
+        rgba(79, 140, 255, 0.10);
+
+    border:
+        1px solid rgba(79, 140, 255, 0.30);
+
+    color: #62a0ff;
+
+    font-family: var(--heading-font);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MISSION TEXT
+========================================================= */
+
+.department-vm .mission-item p {
+    margin: 0;
+
+    padding: 0;
+
+    color: #b7c9da;
+
+    font-family: var(--body-font);
+
+    font-size: 0.94rem;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    text-align: left;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   MISSION TEXT HOVER
+========================================================= */
+
+.department-vm .mission-item:hover span {
+    background:
+        rgba(79, 140, 255, 0.18);
+
+    border-color:
+        rgba(79, 140, 255, 0.50);
+
+    color: #7eb0ff;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .department-vm {
+        max-width: 1280px;
+
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+
+    .department-vm-heading {
+        max-width: 950px;
+
+        margin-bottom: 3.5rem;
+    }
+
+
+    .department-vm-heading .vm-eyebrow {
+        font-size: 0.74rem;
+
+        padding:
+            9px 22px;
+    }
+
+
+    .department-vm-heading h2 {
+        font-size: 2.8rem;
+    }
+
+
+    .department-vm-heading .vm-intro {
+        max-width: 800px;
+
+        font-size: 1rem;
+    }
+
+
+    .department-vm .vision-mission {
+        max-width: 1180px;
+
+        grid-template-columns:
+            minmax(0, 0.9fr)
+            minmax(0, 1.1fr);
+
+        gap: 2rem;
+    }
+
+
+    .department-vm .vm-card {
+        padding: 2.6rem;
+    }
+
+
+    .department-vm .vm-card h3 {
+        font-size: 1.8rem;
+    }
+
+
+    .department-vm .vm-card > p {
+        font-size: 0.95rem;
+
+        line-height: 1.9;
+    }
+
+
+    .department-vm .mission-item p {
+        font-size: 0.94rem;
+
+        line-height: 1.75;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1199px) and (min-width: 901px) {
+
+    .department-vm {
+        max-width: 1100px;
+
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+
+    .department-vm-heading {
+        margin-bottom: 3rem;
+    }
+
+
+    .department-vm-heading h2 {
+        font-size: 2.4rem;
+    }
+
+
+    .department-vm-heading .vm-intro {
+        font-size: 0.92rem;
+    }
+
+
+    .department-vm .vision-mission {
+        grid-template-columns:
+            minmax(0, 0.9fr)
+            minmax(0, 1.1fr);
+
+        gap: 1.5rem;
+    }
+
+
+    .department-vm .vm-card {
+        padding: 2rem;
+    }
+
+
+    .department-vm .vm-card h3 {
+        font-size: 1.55rem;
+    }
+
+
+    .department-vm .vm-card > p {
+        font-size: 0.88rem;
+
+        line-height: 1.8;
+    }
+
+
+    .department-vm .mission-item {
+        grid-template-columns:
+            42px
+            minmax(0, 1fr);
+
+        gap: 0.8rem;
+    }
+
+
+    .department-vm .mission-item span {
+        width: 42px;
+        height: 32px;
+    }
+
+
+    .department-vm .mission-item p {
+        font-size: 0.86rem;
+
+        line-height: 1.65;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .department-vm {
+        max-width: 850px;
+
+        padding-left: 1.3rem;
+        padding-right: 1.3rem;
+    }
+
+
+    .department-vm-heading {
+        max-width: 750px;
+
+        margin-bottom: 2.5rem;
+    }
+
+
+    .department-vm-heading .vm-eyebrow {
+        font-size: 0.68rem;
+
+        padding:
+            7px 15px;
+
+        letter-spacing: 0.08em;
+    }
+
+
+    .department-vm-heading h2 {
+        font-size: 2rem;
+    }
+
+
+    .department-vm-heading .vm-intro {
+        font-size: 0.88rem;
+
+        line-height: 1.7;
+    }
+
+
+    .department-vm .vision-mission {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        gap: 1rem;
+    }
+
+
+    .department-vm .vm-card {
+        padding: 1.7rem;
+    }
+
+
+    .department-vm .vm-card h3 {
+        font-size: 1.4rem;
+
+        margin-bottom: 1.1rem;
+    }
+
+
+    .department-vm .vm-card > p {
+        font-size: 0.84rem;
+
+        line-height: 1.75;
+    }
+
+
+    .department-vm .vm-icon {
+        width: 48px;
+        height: 48px;
+
+        margin-bottom: 1.1rem;
+    }
+
+
+    .department-vm .mission-list {
+        gap: 0.9rem;
+    }
+
+
+    .department-vm .mission-item {
+        grid-template-columns:
+            40px
+            minmax(0, 1fr);
+
+        gap: 0.7rem;
+    }
+
+
+    .department-vm .mission-item span {
+        width: 40px;
+        height: 31px;
+    }
+
+
+    .department-vm .mission-item p {
+        font-size: 0.82rem;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .department-vm {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+
+    .department-vm-heading {
+        width: 100%;
+
+        margin-bottom: 2rem;
+    }
+
+
+    .department-vm-heading .vm-eyebrow {
+        max-width: 100%;
+
+        padding:
+            7px 12px;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.06em;
+
+        line-height: 1.5;
+    }
+
+
+    .department-vm-heading h2 {
+        font-size: 1.7rem;
+
+        line-height: 1.15;
+    }
+
+
+    .department-vm-heading .vm-intro {
+        margin-top: 0.8rem;
+
+        font-size: 0.8rem;
+
+        line-height: 1.65;
+    }
+
+
+    .department-vm .vision-mission {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+
+        margin: 0 auto;
+    }
+
+
+    .department-vm .vm-card {
+        width: 100%;
+
+        padding: 1.5rem;
+
+        border-radius: 15px;
+    }
+
+
+    .department-vm .vm-card h3 {
+        font-size: 1.35rem;
+
+        margin-bottom: 1rem;
+    }
+
+
+    .department-vm .vm-card > p {
+        font-size: 0.82rem;
+
+        line-height: 1.7;
+    }
+
+
+    .department-vm .vm-icon {
+        width: 45px;
+        height: 45px;
+
+        margin-bottom: 1rem;
+
+        font-size: 1.15rem;
+    }
+
+
+    .department-vm .mission-list {
+        gap: 0.9rem;
+    }
+
+
+    .department-vm .mission-item {
+        grid-template-columns:
+            38px
+            minmax(0, 1fr);
+
+        gap: 0.65rem;
+    }
+
+
+    .department-vm .mission-item span {
+        width: 38px;
+        height: 30px;
+
+        font-size: 0.68rem;
+    }
+
+
+    .department-vm .mission-item p {
+        font-size: 0.8rem;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .department-vm {
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+    }
+
+
+    .department-vm-heading {
+        margin-bottom: 1.7rem;
+    }
+
+
+    .department-vm-heading .vm-eyebrow {
+        font-size: 0.52rem;
+
+        padding:
+            6px 10px;
+
+        letter-spacing: 0.05em;
+    }
+
+
+    .department-vm-heading h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .department-vm-heading .vm-intro {
+        font-size: 0.76rem;
+
+        line-height: 1.65;
+    }
+
+
+    .department-vm .vm-card {
+        padding: 1.3rem;
+
+        border-radius: 14px;
+    }
+
+
+    .department-vm .vm-card h3 {
+        font-size: 1.25rem;
+
+        margin-bottom: 0.9rem;
+    }
+
+
+    .department-vm .vm-card > p {
+        font-size: 0.78rem;
+
+        line-height: 1.65;
+    }
+
+
+    .department-vm .vm-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 1.05rem;
+    }
+
+
+    .department-vm .mission-item {
+        grid-template-columns:
+            36px
+            minmax(0, 1fr);
+
+        gap: 0.6rem;
+    }
+
+
+    .department-vm .mission-item span {
+        width: 36px;
+        height: 29px;
+
+        font-size: 0.64rem;
+    }
+
+
+    .department-vm .mission-item p {
+        font-size: 0.76rem;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .department-vm {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+    }
+
+
+    .department-vm-heading h2 {
+        font-size: 1.4rem;
+    }
+
+
+    .department-vm-heading .vm-eyebrow {
+        font-size: 0.48rem;
+
+        padding:
+            5px 8px;
+    }
+
+
+    .department-vm-heading .vm-intro {
+        font-size: 0.72rem;
+    }
+
+
+    .department-vm .vm-card {
+        padding: 1.15rem;
+    }
+
+
+    .department-vm .vm-card h3 {
+        font-size: 1.15rem;
+    }
+
+
+    .department-vm .vm-card > p {
+        font-size: 0.74rem;
+    }
+
+
+    .department-vm .mission-item {
+        grid-template-columns:
+            34px
+            minmax(0, 1fr);
+
+        gap: 0.55rem;
+    }
+
+
+    .department-vm .mission-item span {
+        width: 34px;
+        height: 28px;
+    }
+
+
+    .department-vm .mission-item p {
+        font-size: 0.72rem;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .department-vm .vm-card {
+        transition: none;
+    }
+
+    .department-vm .vm-card:hover {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   SAFETY — PREVENT HORIZONTAL OVERFLOW
+========================================================= */
+
+.department-vm,
+.department-vm *,
+.department-vm *::before,
+.department-vm *::after {
+    box-sizing: border-box;
+}
+
+
+.department-vm img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   END — VISION & MISSION
+========================================================= */
