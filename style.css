@@ -1739,57 +1739,232 @@ img {
 
 .v-grid {
     display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 3rem;
-
-    align-items: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Venue Image */
 .v-img {
     width: 100%;
-
-    height: 320px;
+    height: 100%;
+    min-height: 320px;
+    max-height: 420px;
 
     object-fit: cover;
 
+    display: block;
+
     border-radius: 15px;
 
-    border:
-        1px solid var(--border);
+    border: 1px solid var(--border);
 
-    box-shadow:
-        var(--shadow-md);
+    box-shadow: var(--shadow-md);
+
+    box-sizing: border-box;
 }
 
+/* Venue Information */
+.v-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+/* Venue Heading */
 .v-info h3 {
     font-family: var(--heading-font);
 
-    font-size: 1.375rem;
+    font-size: 1.5rem;
 
     font-weight: 700;
 
+    line-height: 1.3;
+
     letter-spacing: -0.02em;
 
-    margin-bottom: 1rem;
+    margin: 0 0 1.2rem;
+
+    color: #ffffff;
 }
 
+/* Venue Paragraph */
 .v-info p {
-    font-size: 0.94rem;
+    font-size: 0.95rem;
 
     color: var(--text-dim);
 
-    line-height: 1.7;
+    line-height: 1.8;
 
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
+
+    text-align: justify;
+
+    text-justify: inter-word;
+
+    max-width: 100%;
 }
 
+/* Strong Text */
 .v-info strong {
-    color: #fff;
+    color: #ffffff;
+
+    font-weight: 700;
 }
 
+/* Last paragraph */
+.v-info p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   VENUE - DESKTOP
+========================================================= */
+
+@media (min-width: 1025px) {
+
+    .v-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        gap: 3.5rem;
+
+        align-items: center;
+    }
+
+    .v-img {
+        min-height: 350px;
+        height: 350px;
+    }
+
+    .v-info {
+        padding: 0.5rem 0;
+    }
+
+    .v-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .v-info p {
+        font-size: 0.96rem;
+        line-height: 1.85;
+        text-align: justify;
+    }
+}
+
+
+/* =========================================================
+   VENUE - TABLET
+========================================================= */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    .v-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        gap: 2rem;
+    }
+
+    .v-img {
+        height: 300px;
+        min-height: 300px;
+    }
+
+    .v-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .v-info p {
+        font-size: 0.92rem;
+        line-height: 1.7;
+        text-align: justify;
+    }
+}
+
+
+/* =========================================================
+   VENUE - MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .v-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 1.75rem;
+
+        width: 100%;
+    }
+
+    .v-img {
+        width: 100%;
+
+        height: 260px;
+
+        min-height: 260px;
+
+        max-height: 300px;
+    }
+
+    .v-info {
+        width: 100%;
+    }
+
+    .v-info h3 {
+        font-size: 1.3rem;
+
+        line-height: 1.35;
+
+        margin-bottom: 0.9rem;
+    }
+
+    .v-info p {
+        font-size: 0.92rem;
+
+        line-height: 1.7;
+
+        text-align: justify;
+
+        margin-bottom: 0.9rem;
+    }
+}
+
+
+/* =========================================================
+   VENUE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .v-grid {
+        gap: 1.4rem;
+    }
+
+    .v-img {
+        height: 220px;
+        min-height: 220px;
+    }
+
+    .v-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .v-info p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+}
 
 /* =========================================================
    COMMITTEE
