@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ic-rate.vercel.app/sitemap.xml
