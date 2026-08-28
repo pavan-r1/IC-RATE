@@ -1567,7 +1567,7 @@
         <p>
             Submit your research paper for the
             International Conference on Research
-            Advances in Technology and Education.<br><a href="https://forms.easebuzz.in/register/TJohnInstituteofTechn/ic-rate-2026-registration"><strong><u>click here to pay</u></strong></a><br>
+            Advances in Technology and Education.<br>
         </p>
 
     </section>
@@ -1801,22 +1801,7 @@
                         >
 
                     </div>
-                    <div class="field">
-    <label for="transactionId">
-        Transaction ID <span class="required">*</span>
-    </label>
-
-    <input
-        type="text"
-        id="transactionId"
-        name="transactionId"
-        placeholder="Enter your payment transaction ID"
-        required
-        autocomplete="off"
-    >
-</div>
-
-                    <!-- MOBILE -->
+<!-- MOBILE -->
 
                     <div class="field">
 
@@ -1987,65 +1972,7 @@
                         >
 
                     </div>
-
-
-                    <!-- PAYMENT SCREENSHOT -->
-
-                    <div class="field full">
-
-                        <label for="paymentScreenshot">
-
-                            Registration / Payment Screenshot
-
-                            <span class="required">
-                                *
-                            </span>
-
-                        </label>
-
-
-                        <div class="file-box">
-
-                            <input
-                                type="file"
-                                id="paymentScreenshot"
-                                accept=".jpg,.jpeg,.png,image/jpeg,image/png"
-                                required
-                            >
-
-
-                            <div class="file-content">
-
-                                <div class="file-icon">
-                                    ↑
-                                </div>
-
-                                <span class="file-title">
-                                    Upload Payment Screenshot
-                                </span>
-
-                                <span class="file-description">
-                                    JPG or PNG
-                                </span>
-
-                                <div
-                                    class="selected-file"
-                                    id="payment-file-name"
-                                ></div>
-
-                            </div>
-
-                        </div>
-
-                        <p class="help-text">
-                            Upload the screenshot of your
-                            registration/payment confirmation.
-                        </p>
-
-                    </div>
-
-
-                </div>
+</div>
 
 
                 <div class="actions">
@@ -2548,24 +2475,7 @@
                             </strong>
 
                         </div>
-
-
-                        <div class="review-item">
-
-                            <span>
-                                Transaction ID
-                            </span>
-
-                            <strong
-                                id="review-transaction"
-                            >
-                                —
-                            </strong>
-
-                        </div>
-
-
-                        <div class="review-item">
+<div class="review-item">
 
                             <span>
                                 Corresponding Author
@@ -2738,24 +2648,7 @@
 
 
                     <div class="review-grid">
-
-
-                        <div class="review-item">
-
-                            <span>
-                                Payment Screenshot
-                            </span>
-
-                            <strong
-                                id="review-payment"
-                            >
-                                Not selected
-                            </strong>
-
-                        </div>
-
-
-                        <div class="review-item">
+<div class="review-item">
 
                             <span>
                                 Research Paper
@@ -3410,13 +3303,6 @@
                 );
 
 
-            document.getElementById(
-                "review-transaction"
-            ).textContent =
-                getValue(
-                    "transactionId"
-                );
-
 
             document.getElementById(
                 "review-name"
@@ -3492,38 +3378,11 @@
                 getValue(
                     "paperAbstract"
                 );
+            /* Files */
+            const paper = document.getElementById("paperFile").files[0];
 
-
-            /*
-             * Files
-             */
-
-            const payment =
-                document.getElementById(
-                    "paymentScreenshot"
-                ).files[0];
-
-
-            const paper =
-                document.getElementById(
-                    "paperFile"
-                ).files[0];
-
-
-            document.getElementById(
-                "review-payment"
-            ).textContent =
-                payment
-                    ? payment.name
-                    : "Not selected";
-
-
-            document.getElementById(
-                "review-paper"
-            ).textContent =
-                paper
-                    ? paper.name
-                    : "Not selected";
+            document.getElementById("review-paper").textContent =
+                paper ? paper.name : "Not selected";
 
 
             /*
@@ -3769,75 +3628,15 @@
                 return;
 
             }
-
-
-            /*
-             * Files
-             */
-
-            const paymentFile =
-                document.getElementById(
-                    "paymentScreenshot"
-                ).files[0];
-
-
-            const paperFile =
-                document.getElementById(
-                    "paperFile"
-                ).files[0];
-
-
-            if (!paymentFile) {
-
-                alert(
-                    "Please upload the payment screenshot."
-                );
-
-                return;
-
-            }
-
+            /* Files */
+            const paperFile = document.getElementById("paperFile").files[0];
 
             if (!paperFile) {
-
-                alert(
-                    "Please upload the research paper PDF."
-                );
-
+                alert("Please upload the research paper PDF.");
                 return;
-
             }
-
-
-            /*
-             * File type validation
-             */
-
-            const paymentTypes = [
-                "image/jpeg",
-                "image/png"
-            ];
-
-
-            if (
-                !paymentTypes.includes(
-                    paymentFile.type
-                )
-            ) {
-
-                alert(
-                    "Payment screenshot must be JPG or PNG."
-                );
-
-                return;
-
-            }
-
-
-            if (
-                paperFile.type !==
-                "application/pdf"
-            ) {
+            /* File type validation */
+            if (paperFile.type !== "application/pdf") {
 
                 alert(
                     "Research paper must be a PDF."
@@ -3846,42 +3645,10 @@
                 return;
 
             }
+            /* File size validation */
+            const MAX_PAPER_SIZE = 10 * 1024 * 1024;
 
-
-            /*
-             * File size validation
-             *
-             * For the first version:
-             * Payment: 5 MB
-             * Paper: 10 MB
-             */
-
-            const MAX_PAYMENT_SIZE =
-                5 * 1024 * 1024;
-
-
-            const MAX_PAPER_SIZE =
-                10 * 1024 * 1024;
-
-
-            if (
-                paymentFile.size >
-                MAX_PAYMENT_SIZE
-            ) {
-
-                alert(
-                    "Payment screenshot must be smaller than 5 MB."
-                );
-
-                return;
-
-            }
-
-
-            if (
-                paperFile.size >
-                MAX_PAPER_SIZE
-            ) {
+            if (paperFile.size > MAX_PAPER_SIZE) {
 
                 alert(
                     "Research paper must be smaller than 10 MB."
@@ -3920,11 +3687,6 @@
                 /*
                  * Convert files
                  */
-
-                const paymentBase64 =
-                    await fileToBase64(
-                        paymentFile
-                    );
 
 
                 const paperBase64 =
@@ -4019,11 +3781,6 @@
                             "participantCategory"
                         ),
 
-                    transactionId:
-                        getValue(
-                            "transactionId"
-                        ),
-
                     correspondingName:
                         getValue(
                             "correspondingName"
@@ -4086,21 +3843,7 @@
 
                     authors:
                         authors,
-
-                    paymentFile: {
-
-                        name:
-                            paymentFile.name,
-
-                        mimeType:
-                            paymentFile.type,
-
-                        data:
-                            paymentBase64
-
-                    },
-
-                    paperFile: {
+paperFile: {
 
                         name:
                             paperFile.name,
@@ -4282,29 +4025,6 @@
 
         document
             .getElementById(
-                "paymentScreenshot"
-            )
-            .addEventListener(
-                "change",
-                function () {
-
-                    const file =
-                        this.files[0];
-
-
-                    document.getElementById(
-                        "payment-file-name"
-                    ).textContent =
-                        file
-                            ? file.name
-                            : "";
-
-                }
-            );
-
-
-        document
-            .getElementById(
                 "paperFile"
             )
             .addEventListener(
@@ -4339,3 +4059,4 @@
 </body>
 
 </html>
+ remove the payment submittion parts and give the code
