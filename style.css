@@ -4239,6 +4239,51 @@ img {
     max-width: 100%;
 }
 
+.whatsapp-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1001;
+    display: grid;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    background: #25d366;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float svg {
+    width: 48px;
+    height: 48px;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .whatsapp-float {
+        right: 16px;
+        bottom: 16px;
+        width: 58px;
+        height: 58px;
+    }
+
+    .whatsapp-float svg {
+        width: 44px;
+        height: 44px;
+    }
+}
+
 
 /* =========================================================
    END — VISION & MISSION
