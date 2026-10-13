@@ -1,0 +1,357 @@
+/* IC-RATE 2026 — poster.html only */
+
+body:has(.poster-page) {
+  margin: 0;
+  background: #f3f6fc;
+  color: #172b46;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body:has(.poster-page) .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #e1e8f2;
+  box-shadow: 0 3px 18px rgba(20, 40, 70, 0.08);
+}
+
+body:has(.poster-page) .header-inner {
+  width: min(1200px, 92%);
+  min-height: 82px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+body:has(.poster-page) .logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+body:has(.poster-page) .logo-img {
+  display: block;
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+body:has(.poster-page) .logo-text {
+  color: #102544;
+  font-size: 1.1rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+body:has(.poster-page) .nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+body:has(.poster-page) .nav a {
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #34445d;
+  font-size: 0.88rem;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+body:has(.poster-page) .nav a:hover {
+  background: #edf3ff;
+  color: #155eef;
+}
+
+body:has(.poster-page) .nav a.nav-cta {
+  background: #155eef;
+  color: white;
+}
+
+body:has(.poster-page) .mobile-btn {
+  display: none;
+}
+
+body:has(.poster-page) .poster-page {
+  min-height: 70vh;
+  padding: 55px 20px 80px;
+  background: linear-gradient(180deg, #f8faff, #eef3fa);
+}
+
+body:has(.poster-page) .poster-shell {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body:has(.poster-page) .poster-heading {
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+body:has(.poster-page) .poster-eyebrow {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: #e7efff;
+  color: #155eef;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+body:has(.poster-page) .poster-heading h1 {
+  margin: 18px 0 12px;
+  color: #0b1f3a;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+}
+
+body:has(.poster-page) .poster-heading p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+body:has(.poster-page) .poster-card {
+  padding: clamp(20px, 4vw, 38px);
+  border: 1px solid #e1e8f2;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(11, 31, 58, 0.07);
+}
+
+body:has(.poster-page) .poster-card h2 {
+  margin-top: 0;
+  color: #0b1f3a;
+}
+
+body:has(.poster-page) .poster-note {
+  margin-bottom: 24px;
+  padding: 15px 18px;
+  border-left: 4px solid #155eef;
+  border-radius: 8px;
+  background: #f0f5ff;
+  color: #344d70;
+  line-height: 1.7;
+}
+
+body:has(.poster-page) .poster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+body:has(.poster-page) .poster-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+body:has(.poster-page) .poster-field.full {
+  grid-column: 1 / -1;
+}
+
+body:has(.poster-page) .poster-field label {
+  color: #243650;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+body:has(.poster-page) .poster-field input,
+body:has(.poster-page) .poster-field select,
+body:has(.poster-page) .poster-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d5deeb;
+  border-radius: 9px;
+  background: #fbfcff;
+  color: #172b46;
+  font: inherit;
+}
+
+body:has(.poster-page) .poster-field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+body:has(.poster-page) .poster-field input:focus,
+body:has(.poster-page) .poster-field select:focus,
+body:has(.poster-page) .poster-field textarea:focus {
+  outline: none;
+  border-color: #155eef;
+  box-shadow: 0 0 0 3px rgba(21, 94, 239, 0.12);
+}
+
+body:has(.poster-page) .poster-field small {
+  color: #718096;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+body:has(.poster-page) .poster-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+  color: #53647b;
+  line-height: 1.7;
+}
+
+body:has(.poster-page) .poster-check input {
+  flex: 0 0 auto;
+  margin-top: 5px;
+}
+
+body:has(.poster-page) .poster-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+body:has(.poster-page) .poster-actions .btn,
+body:has(.poster-page) .poster-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 9px;
+  font-weight: 750;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body:has(.poster-page) .poster-submit {
+  border: none;
+  background: #155eef;
+  color: #fff;
+}
+
+body:has(.poster-page) .poster-submit:hover:not(:disabled) {
+  background: #0d47c4;
+}
+
+body:has(.poster-page) .poster-status.show {
+  display: block;
+}
+
+body:has(.poster-page) .poster-status {
+  display: none;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 9px;
+  overflow-wrap: anywhere;
+}
+
+body:has(.poster-page) .poster-status.error {
+  background: #fff0f0;
+  color: #8a1820;
+}
+
+body:has(.poster-page) .poster-status.success {
+  background: #eef9f0;
+  color: #155d2a;
+}
+
+body:has(.poster-page) .poster-back {
+  display: inline-block;
+  margin-top: 22px;
+  color: #155eef;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+body:has(.poster-page) .poster-footer {
+  padding: 24px 15px;
+  border-top: 1px solid #e1e8f2;
+  background: #fff;
+  color: #718096;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  body:has(.poster-page) .header-inner {
+    width: 94%;
+  }
+
+  body:has(.poster-page) .nav {
+    gap: 0;
+  }
+
+  body:has(.poster-page) .nav a {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 760px) {
+  body:has(.poster-page) .header-inner {
+    min-height: 70px;
+  }
+
+  body:has(.poster-page) .logo-img {
+    width: 45px;
+    height: 45px;
+  }
+
+  body:has(.poster-page) .nav {
+    display: none;
+  }
+
+  body:has(.poster-page) .mobile-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+    border: 1px solid #dce4f0;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+  }
+
+  body:has(.poster-page) .mobile-btn span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #0b1f3a;
+  }
+
+  body:has(.poster-page) .poster-page {
+    padding: 35px 14px 50px;
+  }
+
+  body:has(.poster-page) .poster-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body:has(.poster-page) .poster-field.full {
+    grid-column: auto;
+  }
+
+  body:has(.poster-page) .poster-actions {
+    flex-direction: column;
+  }
+
+  body:has(.poster-page) .poster-actions .btn,
+  body:has(.poster-page) .poster-submit {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

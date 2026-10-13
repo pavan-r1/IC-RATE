@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a research poster to IC-RATE 2026, T. John Institute of Technology, Bengaluru.">
+  <title>Poster Submission | IC-RATE 2026</title>
+  <link rel="icon" type="image/jpeg" href="./image/LOGO.jpeg">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./poster.css">
+
+  <style>
+    .poster-page {
+      min-height: 70vh;
+      padding: 3.5rem 1rem 5rem;
+    }
+
+    .poster-shell {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .poster-heading {
+      text-align: center;
+      margin: 1rem auto 2rem;
+    }
+
+    .poster-eyebrow {
+      color: var(--red, #c9232b);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .poster-heading h1 {
+      margin: .65rem 0;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.12;
+    }
+
+    .poster-heading p {
+      max-width: 700px;
+      margin: .75rem auto 0;
+      color: var(--text-dim, #626262);
+      line-height: 1.7;
+    }
+
+    .poster-card {
+      background: var(--card, #fff);
+      border: 1px solid rgba(120,120,120,.22);
+      border-radius: 18px;
+      padding: clamp(1.1rem, 3vw, 2rem);
+      box-shadow: 0 15px 45px rgba(0,0,0,.07);
+    }
+
+    .poster-note {
+      background: rgba(190,30,45,.07);
+      border-left: 4px solid var(--red, #c9232b);
+      padding: .9rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      line-height: 1.55;
+    }
+
+    .poster-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 1.1rem;
+    }
+
+    .poster-field {
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+      min-width: 0;
+    }
+
+    .poster-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .poster-field label {
+      font-weight: 700;
+      font-size: .92rem;
+    }
+
+    .poster-field input,
+    .poster-field select,
+    .poster-field textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: .85rem .9rem;
+      border: 1px solid #cfd3d8;
+      border-radius: 9px;
+      background: #fff;
+      color: #20242a;
+      font: inherit;
+    }
+
+    .poster-field textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .poster-field small,
+    .poster-help {
+      color: var(--text-dim, #626262);
+      font-size: .82rem;
+      line-height: 1.5;
+    }
+
+    .poster-file {
+      padding: 1rem;
+      border: 1px dashed #9ba2ab;
+      border-radius: 10px;
+      background: rgba(120,120,120,.04);
+    }
+
+    .poster-check {
+      display: flex;
+      align-items: flex-start;
+      gap: .7rem;
+      line-height: 1.55;
+      margin: 1.2rem 0;
+    }
+
+    .poster-check input {
+      margin-top: .3rem;
+    }
+
+    .poster-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .8rem;
+      margin-top: 1.4rem;
+    }
+
+    .poster-submit {
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .poster-submit:disabled {
+      opacity: .65;
+      cursor: wait;
+    }
+
+    .poster-status {
+      display: none;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 9px;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+    }
+
+    .poster-status.show {
+      display: block;
+    }
+
+    .poster-status.error {
+      background: #fff0f0;
+      color: #8a1820;
+      border: 1px solid #f0b9bd;
+    }
+
+    .poster-status.success {
+      background: #eef9f0;
+      color: #155d2a;
+      border: 1px solid #b8e0c1;
+    }
+
+    .poster-back {
+      display: inline-block;
+      margin-top: 1.3rem;
+      color: var(--red, #c9232b);
+      font-weight: 700;
+    }
+
+    .poster-footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-top: 1px solid rgba(120,120,120,.2);
+      color: var(--text-dim, #626262);
+      font-size: .85rem;
+    }
+
+    .poster-deadline {
+      margin: 0 auto 1.5rem;
+      padding: 1.25rem;
+      border: 1px solid #f0d18a;
+      border-radius: 14px;
+      background: linear-gradient(135deg,#fff7e6,#fff);
+    }
+
+    .poster-deadline-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: .8rem;
+      margin-bottom: .9rem;
+    }
+
+    .poster-deadline-head strong {
+      color: var(--red, #c9232b);
+      font-size: 1.05rem;
+    }
+
+    .poster-deadline-head p {
+      margin: .25rem 0 0;
+      color: var(--text-dim, #626262);
+    }
+
+    .poster-countdown {
+      display: grid;
+      grid-template-columns: repeat(4,minmax(0,1fr));
+      gap: .65rem;
+    }
+
+    .poster-time-box {
+      text-align: center;
+      border-radius: 10px;
+      padding: .8rem .4rem;
+      color: #fff;
+      background: #073b70;
+    }
+
+    .poster-time-box span {
+      display: block;
+      font-size: clamp(1.35rem,3vw,2rem);
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.25;
+    }
+
+    .poster-time-box small {
+      font-size: .76rem;
+      color: #e4efff;
+    }
+
+    .poster-deadline-message {
+      margin: .8rem 0 0;
+      font-size: .88rem;
+      font-weight: 700;
+      color: #8a1820;
+    }
+
+    .poster-guidelines {
+      margin: 1.2rem 0 1.5rem;
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(120,120,120,.22);
+      border-radius: 12px;
+      background: rgba(120,120,120,.035);
+    }
+
+    .poster-guidelines h3 {
+      margin: .1rem 0 .65rem;
+    }
+
+    .poster-guidelines ol {
+      margin: .5rem 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .poster-guidelines li {
+      padding: .2rem 0 .4rem;
+      line-height: 1.55;
+    }
+
+    .poster-sample {
+      margin: 1.5rem 0;
+    }
+
+    .poster-sample img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 650px;
+      object-fit: contain;
+      border: 1px solid rgba(120,120,120,.22);
+      border-radius: 10px;
+      background: #f7f8fa;
+    }
+
+    .poster-sample a {
+      display: inline-block;
+      margin-top: .65rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 680px) {
+      .poster-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .poster-field.full {
+        grid-column: auto;
+      }
+
+      .poster-countdown {
+        gap: .4rem;
+      }
+
+      .poster-time-box {
+        padding: .7rem .2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="./index.html" class="logo-link" aria-label="IC-RATE 2026 home">
+        <img src="./image/LOGO.jpeg" alt="IC-RATE 2026 logo" class="logo-img">
+        <span class="logo-text">IC-RATE 2026</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#dates-sec">Dates</a>
+        <a href="./index.html#tracks">Papers</a>
+        <a href="./submit-paper.html">Submit Paper</a>
+        <a href="./index.html#contact">Contact</a>
+        <a href="./index.html" class="nav-cta">Back to Conference</a>
+      </nav>
+
+      <button class="mobile-btn" id="mob-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-menu" id="mob-menu" aria-label="Mobile navigation">
+      <button class="mobile-close" id="mob-close" aria-label="Close menu">&times;</button>
+      <a href="./index.html#about" onclick="closeMob()">About</a>
+      <a href="./index.html#dates-sec" onclick="closeMob()">Dates</a>
+      <a href="./index.html#tracks" onclick="closeMob()">Papers</a>
+      <a href="./submit-paper.html" onclick="closeMob()">Submit Paper</a>
+      <a href="./index.html#contact" onclick="closeMob()">Contact</a>
+      <a href="./index.html" class="nav-cta" onclick="closeMob()">Back to Conference</a>
+    </nav>
+  </header>
+
+  <main class="poster-page">
+    <div class="poster-shell">
+      <div class="poster-heading">
+        <span class="poster-eyebrow">IC-RATE 2026 · Call for Posters</span>
+        <h1>Poster Submission</h1>
+        <p>
+          Submit your research poster for the International Conference on Recent
+          Advancements in Technology &amp; Engineering at T. John Institute of
+          Technology, Bengaluru.
+        </p>
+      </div>
+
+      <section class="poster-deadline" aria-label="Poster submission deadline">
+
+        <div class="poster-countdown" id="posterCountdown">
+          <div class="poster-time-box">
+            <span id="posterDays">00</span><small>Days</small>
+          </div>
+          <div class="poster-time-box">
+            <span id="posterHours">00</span><small>Hours</small>
+          </div>
+          <div class="poster-time-box">
+            <span id="posterMinutes">00</span><small>Minutes</small>
+          </div>
+          <div class="poster-time-box">
+            <span id="posterSeconds">00</span><small>Seconds</small>
+          </div>
+        </div>
+
+        <p class="poster-deadline-message" id="posterTimerMessage" role="status" aria-live="polite">
+          Time remaining to submit your poster.
+        </p>
+      </section>
+
+      <section class="poster-guidelines" aria-labelledby="poster-guidelines-title">
+        <h2 id="poster-guidelines-title">Poster Submission Rules &amp; Guidelines</h2>
+        <ol>
+          <li>Submit your poster as a PDF file only. Maximum file size: 8 MB.</li>
+          <li>Use a clear academic layout with a title, author names, institutional affiliations, introduction or problem statement, objectives, methodology, results or expected outcomes, conclusion, and references where applicable.</li>
+          <li>Use readable fonts, high-contrast colours, concise text, and clear figures or charts. Avoid overcrowding the poster.</li>
+          <li>Submit original work and ensure that you have permission to use all text, images, data, and other materials included.</li>
+          <li>Provide accurate presenter, co-author, department, institution, email, and mobile details.</li>
+          <li>Do not include confidential, sensitive, or personal information that should not be shared with the conference committee.</li>
+          <li>Submitting a poster does not guarantee acceptance. The conference committee may review submissions and contact the corresponding author.</li>
+          <li>If accepted, follow the presentation, registration, and any further instructions communicated by the organisers.</li>
+          <li>Submit within the displayed 10-day window. Contact the conference committee if you have questions about dimensions, presentation format, or eligibility.</li>
+        </ol>
+      </section>
+
+      <section class="poster-sample" aria-labelledby="poster-sample-title">
+        <h2 id="poster-sample-title">Sample Poster Template</h2>
+        <p class="poster-help">
+          Use this sample as a layout reference. Replace its content with your own
+          research; do not copy its results or claims.
+        </p>
+        <a href="./image/postertemplete.png" target="_blank" rel="noopener">
+          <img src="./image/postertemplete.png"
+               alt="Sample poster template for IC-RATE 2026"
+               loading="lazy">
+        </a>
+      </section>
+
+      <section class="poster-card">
+        <div class="poster-note">
+          <strong>Before submitting:</strong>
+          Complete all required fields, verify your contact details, and upload
+          your poster as a PDF file no larger than 8 MB.
+        </div>
+
+        <form id="posterForm">
+          <div class="poster-grid">
+            <div class="poster-field">
+              <label for="presenterName">Presenter's Full Name *</label>
+              <input id="presenterName" name="presenterName" required maxlength="150" autocomplete="name">
+            </div>
+
+            <div class="poster-field">
+              <label for="email">Email Address *</label>
+              <input id="email" name="email" type="email" required maxlength="200" autocomplete="email">
+            </div>
+
+            <div class="poster-field">
+              <label for="mobile">Mobile Number *</label>
+              <input id="mobile" name="mobile" type="tel" required maxlength="20" autocomplete="tel">
+            </div>
+
+            <div class="poster-field">
+              <label for="institution">Institution / College *</label>
+              <input id="institution" name="institution" required maxlength="250">
+            </div>
+
+            <div class="poster-field">
+              <label for="department">Department *</label>
+              <input id="department" name="department" required maxlength="150">
+            </div>
+
+            <div class="poster-field">
+              <label for="category">Presenter Category *</label>
+              <select id="category" name="category" required>
+                <option value="">Select category</option>
+                <option>Undergraduate Student</option>
+                <option>Postgraduate Student</option>
+                <option>Research Scholar</option>
+                <option>Faculty</option>
+                <option>Industry Professional</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="poster-field full">
+              <label for="posterTitle">Poster Title *</label>
+              <input id="posterTitle" name="posterTitle" required maxlength="300">
+            </div>
+
+            <div class="poster-field">
+              <label for="track">Conference Track *</label>
+              <select id="track" name="track" required>
+                <option value="">Select a track</option>
+                <option>Artificial Intelligence &amp; Machine Learning</option>
+                <option>Data Science &amp; Analytics</option>
+                <option>IoT &amp; Smart Systems</option>
+                <option>Cloud &amp; Edge Computing</option>
+                <option>Security &amp; Blockchain</option>
+                <option>Software Engineering</option>
+                <option>Sustainable Engineering &amp; Green Technologies</option>
+                <option>Strategic Management &amp; Business Innovation</option>
+                <option>Interdisciplinary / Other</option>
+              </select>
+            </div>
+
+            <div class="poster-field">
+              <label for="coAuthors">Co-authors (eg. name1(email),name2(email),name3(email))</label>
+              <input id="coAuthors" name="coAuthors" maxlength="500" placeholder="Separate names with commas">
+            </div>
+
+            <div class="poster-field full">
+              <label for="abstract">Short Abstract / Poster Summary *</label>
+              <textarea id="abstract" name="abstract" required maxlength="2500" placeholder="Briefly describe the problem, approach, and key findings. Do not include unverified results."></textarea>
+              <small>Maximum 2,500 characters.</small>
+            </div>
+
+            <div class="poster-field full">
+              <label for="posterFile">Poster PDF *</label>
+              <input class="poster-file" id="posterFile" name="posterFile" type="file" accept="application/pdf,.pdf" required>
+              <small id="fileHelp">PDF only, up to 8 MB. Do not upload confidential or personally sensitive information.</small>
+            </div>
+          </div>
+
+          <label class="poster-check">
+            <input id="originality" type="checkbox" required>
+            <span>
+              I confirm that I have permission to submit this work, the information
+              provided is accurate, and the poster does not knowingly infringe
+              another person's rights. *
+            </span>
+          </label>
+
+          <label class="poster-check">
+            <input id="policy" type="checkbox" required>
+            <span>
+              I understand that submission does not automatically mean acceptance.
+              The conference committee may review the submission and contact the
+              corresponding author. *
+            </span>
+          </label>
+
+          <div class="poster-actions">
+            <button id="submitBtn" type="submit" class="btn btn-accent poster-submit">
+              Submit Poster →
+            </button>
+            <a href="./index.html" class="btn btn-ghost">Cancel</a>
+          </div>
+
+          <div id="posterStatus" class="poster-status" role="status" aria-live="polite"></div>
+        </form>
+
+        <a class="poster-back" href="./index.html">← Back to IC-RATE 2026 website</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="poster-footer">
+    © 2026 IC-RATE Conference · T. John Institute of Technology, Bengaluru
+  </footer>
+
+  <script>
+    const POSTER_SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycbxcz5grX14gdM0t8DFO_nqawQCujV9wTOvNRc0aoyIOuz_VCx99ASstHIvPOLGtEZfF7w/exec";
+
+    const MAX_FILE_BYTES = 8 * 1024 * 1024;
+
+    // Deadline: 22 October 2026, 11:59:59 PM India Standard Time.
+    const POSTER_DEADLINE =
+      new Date("2026-10-22T23:59:59+05:30").getTime();
+
+    let posterCountdownInterval;
+
+    function updatePosterCountdown() {
+      const remaining = POSTER_DEADLINE - Date.now();
+      const message = document.getElementById("posterTimerMessage");
+
+      const ids = [
+        "posterDays",
+        "posterHours",
+        "posterMinutes",
+        "posterSeconds"
+      ];
+
+      if (remaining <= 0) {
+        ids.forEach(id => {
+          document.getElementById(id).textContent = "00";
+        });
+
+        message.textContent = "The poster submission deadline has passed.";
+
+        const formElement = document.getElementById("posterForm");
+
+        if (formElement) {
+          formElement
+            .querySelectorAll("input, select, textarea, button")
+            .forEach(el => el.disabled = true);
+        }
+
+        if (posterCountdownInterval) {
+          clearInterval(posterCountdownInterval);
+        }
+
+        return;
+      }
+
+      const values = [
+        Math.floor(remaining / 86400000),
+        Math.floor((remaining % 86400000) / 3600000),
+        Math.floor((remaining % 3600000) / 60000),
+        Math.floor((remaining % 60000) / 1000)
+      ];
+
+      ids.forEach((id, index) => {
+        document.getElementById(id).textContent =
+          String(values[index]).padStart(2, "0");
+      });
+
+      message.textContent = "Time remaining to submit your poster.";
+    }
+
+    updatePosterCountdown();
+    posterCountdownInterval = setInterval(updatePosterCountdown, 1000);
+
+    const form = document.getElementById("posterForm");
+    const fileInput = document.getElementById("posterFile");
+    const statusBox = document.getElementById("posterStatus");
+    const submitBtn = document.getElementById("submitBtn");
+
+    function showStatus(message, type) {
+      statusBox.textContent = message;
+      statusBox.className = "poster-status show " + type;
+    }
+
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files[0];
+
+      if (!file) return;
+
+      if (
+        file.type !== "application/pdf" &&
+        !file.name.toLowerCase().endsWith(".pdf")
+      ) {
+        fileInput.value = "";
+        showStatus("Please select a PDF file.", "error");
+      } else if (file.size > MAX_FILE_BYTES) {
+        fileInput.value = "";
+        showStatus(
+          "The selected PDF exceeds 8 MB. Please compress it and try again.",
+          "error"
+        );
+      } else {
+        showStatus(
+          "Selected file: " + file.name +
+          " (" + (file.size / 1024 / 1024).toFixed(2) + " MB)",
+          "success"
+        );
+      }
+    });
+
+    function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        reader.onload = () => {
+          resolve(String(reader.result).split(",")[1]);
+        };
+
+        reader.onerror = () => {
+          reject(new Error("Could not read the selected PDF."));
+        };
+
+        reader.readAsDataURL(file);
+      });
+    }
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+
+      if (Date.now() > POSTER_DEADLINE) {
+        showStatus("The poster submission deadline has passed.", "error");
+        updatePosterCountdown();
+        return;
+      }
+
+      if (!form.reportValidity()) return;
+
+      if (
+        !POSTER_SCRIPT_URL.startsWith("https://script.google.com/macros/s/") ||
+        POSTER_SCRIPT_URL.includes("PASTE_POSTER")
+      ) {
+        showStatus(
+          "The submission form is ready, but the poster backend has not been configured.",
+          "error"
+        );
+        return;
+      }
+
+      const file = fileInput.files[0];
+
+      if (
+        !file ||
+        file.size > MAX_FILE_BYTES ||
+        (
+          file.type !== "application/pdf" &&
+          !file.name.toLowerCase().endsWith(".pdf")
+        )
+      ) {
+        showStatus("Please select a valid PDF file of 8 MB or less.", "error");
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting…";
+
+      try {
+        const payload = {
+          submissionType: "poster",
+          presenterName: document.getElementById("presenterName").value.trim(),
+          email: document.getElementById("email").value.trim(),
+          mobile: document.getElementById("mobile").value.trim(),
+          institution: document.getElementById("institution").value.trim(),
+          department: document.getElementById("department").value.trim(),
+          category: document.getElementById("category").value,
+          posterTitle: document.getElementById("posterTitle").value.trim(),
+          track: document.getElementById("track").value,
+          coAuthors: document.getElementById("coAuthors").value.trim(),
+          abstract: document.getElementById("abstract").value.trim(),
+          originalityConfirmed: document.getElementById("originality").checked,
+          policyAccepted: document.getElementById("policy").checked,
+          posterFile: {
+            name: file.name,
+            mimeType: "application/pdf",
+            data: await fileToBase64(file)
+          }
+        };
+
+        const response = await fetch(POSTER_SCRIPT_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const raw = await response.text();
+
+        let result;
+
+        try {
+          result = JSON.parse(raw);
+        } catch {
+          throw new Error(
+            "The server response was not valid JSON. Check the Apps Script deployment and URL."
+          );
+        }
+
+        if (!response.ok || !result.success) {
+          throw new Error(
+            result.error || "The poster submission was not accepted by the server."
+          );
+        }
+
+        form.reset();
+
+        showStatus(
+          "Poster submitted successfully. Your reference ID is " +
+          result.posterId +
+          ". Please save this ID for future communication.",
+          "success"
+        );
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      } catch (error) {
+        showStatus(
+          "Submission failed: " +
+          (error.message || "Unknown error") +
+          " Please try again or contact iconfrate@gmail.com.",
+          "error"
+        );
+      } finally {
+        if (Date.now() <= POSTER_DEADLINE) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit Poster →";
+        }
+      }
+    });
+
+    // Mobile menu behavior.
+    const mobileMenu = document.getElementById("mob-menu");
+
+    document.getElementById("mob-btn")?.addEventListener("click", () => {
+      mobileMenu.classList.add("open");
+    });
+
+    document.getElementById("mob-close")?.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+    });
+
+    window.closeMob = () => {
+      mobileMenu.classList.remove("open");
+    };
+
+    window.addEventListener("scroll", () => {
+      document.getElementById("header")
+        ?.classList.toggle("scrolled", window.scrollY > 40);
+    });
+  </script>
+</body>
+</html>
