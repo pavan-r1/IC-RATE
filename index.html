@@ -47,9 +47,9 @@ content="index, follow">
                     </div>
                 </div>
                 <a href="#contact">Contact</a>
-                <a href="./submit-paper.html" class="nav-cta">
+                <a href="./submit-paper.html" class="nav-cta is-disabled" aria-disabled="true" tabindex="-1" onclick="return false;">
                     Submit Paper
-                    </a>
+                </a>
                 <a href = "./poster.html" class = "nav-cta">
                     Submit Poster
                 </a>
@@ -68,7 +68,7 @@ content="index, follow">
             <a href="#venue" onclick="closeMob()">Venue</a>
             <a href="#committee" onclick="closeMob()">Committee</a>
             <a href="#contact" onclick="closeMob()">Contact</a>
-            <a href="./submit-paper.html" target="_blank" class="nav-cta" onclick="closeMob()">Submit Paper</a>
+            <a href="./submit-paper.html" target="_blank" class="nav-cta is-disabled" aria-disabled="true" tabindex="-1" onclick="return false;">Submit Paper</a>
             <a href="./poster.html" target="_blank" class="nav-cta" onclick="closeMob()">Submit Poster</a>
         </nav>
     </header>
@@ -103,7 +103,7 @@ content="index, follow">
 
             <div class="hero-btns">
                 <a href = "./poster.html" target="_blank" class="btn btn-w">Submit Your Poster →</a>
-                <a href="./submit-paper.html" target="_blank" class="btn btn-w">Submit Your Paper →</a>
+                <a href="./submit-paper.html" target="_blank" class="btn btn-w is-disabled" aria-disabled="true" tabindex="-1" onclick="return false;">Submit Your Paper →</a>
                 <a href="#fees" class="btn btn-ghost">Register Now</a>
             </div>
         </div>
@@ -552,13 +552,13 @@ Additional Article Processing Charges (APC) may apply for journal publication. T
         </div>
 
 
-        <!-- SUBMIT PAPER BUTTON -->
-
         <div style="text-align:center;margin-top:2.5rem;" data-anim>
-
             <a href="./submit-paper.html"
                target="_blank"
-               class="btn btn-accent">
+               class="btn btn-accent is-disabled"
+               aria-disabled="true"
+               tabindex="-1"
+               onclick="return false;">
                 Submit Paper Now →
             </a>
         </div>

@@ -313,6 +313,13 @@ img {
         0 8px 25px rgba(255,255,255,0.15);
 }
 
+.is-disabled {
+    opacity: 0.55 !important;
+    cursor: not-allowed !important;
+    pointer-events: none;
+    filter: grayscale(1);
+}
+
 
 /* =========================================================
    MOBILE BUTTON
